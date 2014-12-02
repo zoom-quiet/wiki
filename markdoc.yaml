@@ -1,0 +1,15 @@
+wiki-name: Zoom.Quiet Wiki # Set this to whatever you want
+
+wiki-dir: "wiki"
+static-dir: "static"
+
+
+## ...other settings...
+markdown:
+  extensions:
+    - codehilite # the important bit
+    - def_list
+    - headerid
+    - toc
+
+
