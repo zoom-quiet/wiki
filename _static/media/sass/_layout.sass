@@ -1,0 +1,138 @@
+html
+  :background-color #f6f6f6
+
+body
+  :background-color white
+  :margin 0 auto
+  :width 650px
+  
+  #breadcrumbs, #content, #footer
+    :background-color white
+    :clear both
+    :float left
+    :overflow hidden
+    :padding 0 20px
+    :width= 650px - (20px + 20px)
+  
+  #breadcrumbs
+    :border-bottom 2px solid #f6f6f6
+    :height 28px
+    :margin 0
+    :padding 0
+    :width 650px
+    li
+      :float left
+      :list-style none
+      :margin 0
+      :padding 0
+      a
+        :display block
+        :float left
+        :padding 0 8px
+      &.last
+        :padding 0 8px
+      &.not-last:after
+        :content "»"
+        :float right
+  
+  #footer
+    :border-top 8px solid #f6f6f6
+    :padding-top 13px
+  
+  .clear
+    :clear both
+    :border-width 0
+    :margin 0
+    :visibility hidden
+
+
+
+body.listing
+  table#pages, table#subdirs, table#files
+    tr
+      :border-bottom 1px solid #777
+      :border-top 1px solid #777
+    td
+      :border none
+      &.size
+        :background-color #f6f6f6
+      &.name
+        :padding 0
+        a
+          :display block
+          :margin 0
+          :padding 4px 8px
+
+
+// Common elements
+
+blockquote
+  :background-color #f6f6f6
+  :padding 13px
+  :padding-bottom 1px
+
+hr
+  :border-style solid
+  :border none
+  :border-top 1px solid #777
+  :margin 28px 0
+
+
+// Lists
+
+dl
+  :margin-left 0
+  dd
+    :margin-bottom 13px
+    :margin-left 13px
+
+ul
+  :margin-top 0
+  li
+    :list-style square outside
+  ul
+    :margin-bottom 0
+
+
+// Code blocks
+
+=codeblock
+  :border-left 1px solid gray
+  :margin-bottom 13px
+  :margin-left 30px
+  :padding-left 12px
+
+pre
+  +codeblock
+
+.codehilite
+  +codeblock
+  pre
+    :border none
+    :margin 0
+    :padding 0
+
+.codehilitetable
+  :margin-left 0
+  :padding-left 0
+  tr td
+    :border none
+    :padding 3px 5px 0 5px
+    &.linenos
+      :background-color #f6f6f6
+      :border-right 1px solid gray
+      :margin 0
+      :padding-right 6px
+      :text-align right
+      :width= 30px - (5px + 6px)
+      .linenodiv pre
+        :border none
+        :margin 0
+        :padding 0
+    &.code
+      :margin 0
+      :padding-left 12px
+      .codehilite
+        :border none
+        :margin 0
+        :padding 0
