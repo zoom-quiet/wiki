@@ -1,5 +1,8 @@
 wiki-name: Zoom.Quiet Static Wiki # Set this to whatever you want
+google-analytics: UA-2331528-6
+
 ## ...other settings...
+disqus_shortname: wikizoomquietio
 author_name: Zoom Quiet
 author_display_name: Zoom.Quiet
 author_gravatar: 26221c6d3cedc50c506aa699e2765252

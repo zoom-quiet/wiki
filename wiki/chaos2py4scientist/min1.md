@@ -32,6 +32,7 @@
 
 嗯嗯嗯....亲,这种环境,实在忒折腾了,俺真心不知道怎么引导 `;-(`
 
+- 请再次回顾: [把时间「浪费」在美好的事物上--百度百家](http://chijianqiang.baijia.baidu.com/article/13522)
 - 只能建议,安装并配置好: [activestate.com/activepython](http://www.activestate.com/activepython)
 - 参考部分的: [HwH 之 SAE初体验-导入手册 | GDG Livin ZhuHai Life;-)](http://blog.zhgdg.org/2014-09/hwh-sae-pre-guider/)
 

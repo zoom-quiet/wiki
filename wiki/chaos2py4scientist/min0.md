@@ -9,6 +9,7 @@
 - [为什么人人都要学编程 | 丧心病狂的90后](http://devrel.zoomquiet.io/data/20140925193439/index.html)
     - [持续学习可以降低不安全感](http://devrel.zoomquiet.io/data/20140422202233/index.html)
     - [先有 Mac 还是先有钱？](http://devrel.zoomquiet.io/data/20140304085232/index.html)
+    - [把时间「浪费」在美好的事物上](http://chijianqiang.baijia.baidu.com/article/13522)
 - [程序员真正的价值](http://coder.zoomquiet.io/data/20141112220917/index.html)
 - [为什么我们不能坚持?](http://camp.zhgdg.org/2014-11/why-canot-holdon/)
 

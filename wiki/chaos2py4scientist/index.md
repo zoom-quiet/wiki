@@ -17,6 +17,7 @@
 - 发布: [chaos2py4scientist](http://wiki.zoomquiet.io/chaos2py4scientist/index)
 - 掺合: 标准 git `Pull-Request` 流程
 - 过程: [HowtoJoin- 如何加入O.B.P](https://code.google.com/p/openbookproject/wiki/HowtoJoin)
+- 网授: [私人MOOC](/DamaMooc)
 
 ### TODO
 
