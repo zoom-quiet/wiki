@@ -2,6 +2,12 @@
 
 # 为毛要学习 Python ?
 
+[奥巴马也要当程序猿 半小时学会js画正方形-高管轶事-看准网](http://www.kanzhun.com/news/10109.html)
+
+![](http://img.kanzhun.com/upload/image/20141209/9d87d6132c3a97ba59621c5a478e9cfb.png)
+
+code.org
+
 这是一个很好的问题,
 但是,这个问题包含了很多层次,俺尝试用一堆文章的层进来回答一下
 
@@ -13,6 +19,17 @@
 - [程序员真正的价值](http://coder.zoomquiet.io/data/20141112220917/index.html)
 - [为什么我们不能坚持?](http://camp.zhgdg.org/2014-11/why-canot-holdon/)
 
+[利用Python进行数据分析 (O'Reilly精品图书系列)-Kindle商店-亚马逊中国](http://www.amazon.cn/Python-Wes-McKinney/dp/B00KD7Q7U2)
+
+[Toolbox : Nature News & Comment](http://www.nature.com/news/toolbox)
+
+[Interactive notebooks: Sharing the code : Nature News & Comment](http://www.nature.com/news/interactive-notebooks-sharing-the-code-1.16261)
+
+[Science](https://github.com/showcases/science)
+- [neuraltalk](https://github.com/karpathy/neuraltalk)
+
+
+[数据处理常用Unix命令 - 阳志平的网志](http://www.yangzhiping.com/tech/datashell.html)
 
 ## 那要怎么学习 Python ?
 

@@ -20,11 +20,11 @@
       {% endblock %}
       
       <title>
-        {% block title_prefix -%}
-          {% if 'wiki-name' in config %}{{ config['wiki-name']|e }} » {% endif %}
-        {%- endblock %}
         {% block title -%}
-          {{ title }}
+          {{ title }} |
+        {%- endblock %}
+        {% block title_prefix -%}
+          {% if 'wiki-name' in config %}{{ config['wiki-name']|e }} {% endif %}
         {%- endblock %}
       </title>
       
