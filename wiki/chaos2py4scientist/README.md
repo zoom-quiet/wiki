@@ -16,7 +16,7 @@
 - 仓库: [wiki4zq/markdoc4zq - GitCafe](https://gitcafe.com/wiki4zq/markdoc4zq)
 - 发布: 
     - wiki 风格: [http://wiki.zoomquiet.io/chaos2py4scientist/](http://wiki.zoomquiet.io/chaos2py4scientist/README)
-    - gitbook 风格: 
+    - gitbook 风格: [http://py4sc.zoomquiet.io/](http://py4sc.zoomquiet.io/index.html)
 - 掺合: 标准 git `Pull-Request` 流程
 - 过程: [HowtoJoin- 如何加入O.B.P](https://code.google.com/p/openbookproject/wiki/HowtoJoin)
 - 网授: [私人MOOC](/DamaMooc)

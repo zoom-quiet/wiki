@@ -5,6 +5,8 @@ import os
 # Local path configuration (can be absolute or relative to fabfile)
 env.deploy_path = '.html'
 DEPLOY_PATH = env.deploy_path
+env.py2sc = 'wiki/chaos2py4scientist/'
+env.cafe_pages = '_book'
 # Remote server configuration
 #production = 'root@localhost:22'
 #dest_path = '/var/www'
@@ -38,5 +40,20 @@ def p2cafe():
             'git ci -am "re-build from local by markdoc @MBP111216ZQ" && '
             #'git pu cafe gitcafe-page '
             'git pu && '
+            'pwd '.format(**env)
+          )
+
+def gitbook():
+    local('cd {py2sc} && '
+            'pwd && '
+            #'ls -la && '
+            'gitbook build && '
+            #'pwd && '
+            'cd {cafe_pages} && '
+            #'git st && '
+            'git add --all . && '
+            'git ci -am "re-build from local by gitbook @MBP111216ZQ" && '
+            'git pu && '
+            #'ls -la && '
             'pwd '.format(**env)
           )
