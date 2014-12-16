@@ -14,7 +14,9 @@
 ## 工程
 
 - 仓库: [wiki4zq/markdoc4zq - GitCafe](https://gitcafe.com/wiki4zq/markdoc4zq)
-- 发布: [chaos2py4scientist](http://wiki.zoomquiet.io/chaos2py4scientist/index)
+- 发布: 
+    - wiki 风格: [http://wiki.zoomquiet.io/chaos2py4scientist/](http://wiki.zoomquiet.io/chaos2py4scientist/README)
+    - gitbook 风格: 
 - 掺合: 标准 git `Pull-Request` 流程
 - 过程: [HowtoJoin- 如何加入O.B.P](https://code.google.com/p/openbookproject/wiki/HowtoJoin)
 - 网授: [私人MOOC](/DamaMooc)
@@ -26,9 +28,10 @@
     根据个人项目的深入增补
 
 
-## 索引
+:
 
-- [为毛](min0) ~ 00:00
-- [宏观](min1) ~ 00:02
-- [进入](min2) ~ 00:30
-- [好了](min3) ~ 00:42
+    :::text
+    真心跟大妈学习 Python?
+    那就请继续了...
+
+* [课程索引](SUMMARY)

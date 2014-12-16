@@ -35,7 +35,7 @@
 
 [42分钟乱入系列手册 (O.B.P)](http://chaos2.zoomquiet.io/)
 
-- [42分钟乱入 Python - 科学家版](/chaos2py4scientist/index) ~ 源自 `开智书友会` 微信群的讨论
+- [42分钟乱入 Python - 科学家版](/chaos2py4scientist/README) ~ 源自 `开智书友会` 微信群的讨论
 
 
 ## 是也乎
