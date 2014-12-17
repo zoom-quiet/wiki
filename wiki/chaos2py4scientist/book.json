@@ -1,0 +1,11 @@
+{
+"plugins": [
+        "maxiang",
+        "disqus"
+    ],
+    "pluginsConfig": {
+        "disqus": {
+            "shortName": "py4sczoomquietio"
+        }
+    }  
+}
