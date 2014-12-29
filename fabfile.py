@@ -3,25 +3,45 @@ import fabric.contrib.project as project
 import os
 
 # Local path configuration (can be absolute or relative to fabfile)
-env.deploy_path = '.html'
-DEPLOY_PATH = env.deploy_path
+env.deploy_path = 'output'
+#env.deploy_path = '.html'
 env.py2sc = 'wiki/chaos2py4scientist/'
-env.book = '_book'
-env.cafe_pages = '../../../42chaos2py4scientist/cafe_OpenMind/'
+env.book = '_book/'
+env.cafe_pages = '../../../7niu_zoomquiet/gitbook/'
+#env.cafe_pages = '../../../42chaos2py4scientist/cafe_OpenMind/'
+env.qrsync_bin = '/opt/bin/7niu_package_darwin_amd64/qrsync'
+env.qrsync_cfg = '../7niu-zoomquiet.json'
+def pub7niu():
+    local('pwd && '
+            '{qrsync_bin} {qrsync_cfg} && '
+            'date '.format(**env)
+          )
 
 def pub2all():
-    p2cafe()
-    gitbook()
+    build()
+    book7niu()
+    pub7niu()
+    #cafe4wiki()
+    #cafe4gitbook()
 
+def book7niu():
+    local('pwd && '
+            'cd {py2sc} && '
+            'gitbook build && '
+            'rsync -avzP4 {book} {cafe_pages} && '
+            #'ls -la && '
+            'date '.format(**env)
+          )
+
+def build():
+    local('markdoc build')
 def serve():
     local('markdoc serve')
 def reserve():
     build()
     serve()
 
-def build():
-    local('markdoc build')
-def p2cafe():
+def cafe4wiki():
     build()
     local('cd {deploy_path} && '
             'pwd && '
@@ -31,10 +51,10 @@ def p2cafe():
             'git ci -am "re-build from local by markdoc @MBP111216ZQ" && '
             #'git pu cafe gitcafe-page '
             'git pu && '
-            'pwd '.format(**env)
+            'date '.format(**env)
           )
 
-def gitbook():
+def cafe4gitbook():
     local('cd {py2sc} && '
             'pwd && '
             'gitbook build && '
@@ -48,6 +68,6 @@ def gitbook():
             'git ci -am "re-build from local by gitbook @MBP111216ZQ" && '
             'git pu && '
             #'ls -la && '
-            'pwd '.format(**env)
+            'date '.format(**env)
           )
 

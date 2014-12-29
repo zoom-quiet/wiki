@@ -1,4 +1,4 @@
-wiki-name: Zoom.Quiet's Personal Static Wiki # Set this to whatever you want
+wiki-name: Zoom.Quiet Personal Static Wiki # Set this to whatever you want
 google-analytics: UA-2331528-6
 
 ## ...other settings...
@@ -16,7 +16,8 @@ author_coderwall: zoomquiet
 hide-prefix: "."
 wiki-dir: "wiki"
 static-dir: "_static"
-html-dir: ".html"
+#html-dir: ".html"
+html-dir: "output"
 template-dir: "_templates"
 temp-dir: ".tmp"
 

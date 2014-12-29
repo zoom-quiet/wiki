@@ -2,6 +2,8 @@
 
 # 准入
 
+...
+
 先得声明,
 要想真正在 
 [42](http://en.wikipedia.org/wiki/42_(number)) 分钟 

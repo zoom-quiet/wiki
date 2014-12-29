@@ -1,5 +1,32 @@
 [TOC]
 
+[Advanced Scientific Programming in Python [start]](https://python.g-node.org/wiki/)
+
+Preliminary Program
+
+- Day0 (Mon Aug 31): Best Programming Practices
+    - Best Practices for Scientific Computing
+    - Version control with git and how to contribute to Open Source with github
+    - Object-oriented programming & design patterns
+- Day1 (Tue Sep 1): Software Carpentry
+    - Test-driven development, unit testing & quality assurance
+    - Debugging, profiling and benchmarking techniques
+    - Advanced Python: generators, decorators, and context managers
+- Day2 (Wed Sep 2): Scientific Tools for Python
+    - Advanced NumPy
+    - The Quest for Speed (intro): Interfacing to C with Cython
+    - Contributing to Open Source Software/Programming in teams
+- Day3 (Thu Sep 3): The Quest for Speed
+    - Writing parallel applications in Python
+    - Python 3: why should I care
+    - Programming project
+- Day4 (Fri Sep 4): Efficient Memory Management
+    - When parallelization does not help: the starving CPUs problem
+    - Programming project
+- Day5 (Sat Sep 5): Practical Software Development
+    - Programming project
+    - The Pelita Tournament
+
 # 为毛要学习 Python ?
 
 [奥巴马也要当程序猿 半小时学会js画正方形-高管轶事-看准网](http://www.kanzhun.com/news/10109.html)
@@ -57,6 +84,29 @@ code.org
 ## 推荐参考
 - [Overview — Python 3.4.2 documentation](https://docs.python.org/3/)
 - [Python Module of the Week - Python Module of the Week](http://pymotw.com/2/contents.html)
+
+
+少即是多...
+
+![WntrM6p.gif（GIF 图像，640x460 像素）](http://i.imgur.com/WntrM6p.gif)
+
+
+## 发布 .ipynb
+
+00 - How to get started
+Hello World
+Two ways to convert .ipynb to a web page: 
+
+(1) via GIST ID:
+create a public gist at http://gist.github.com by uploading a .ipynb file which will generate a gist_id (e.g. 4138271)
+enter the gist_id at http://nbviewer.ipython.org/
+notebook is published as HTML at URL= http://nbviewer.ipython.org/4138271/
+
+(2) via public URL
+upload a .ipynb file to DropBox public folder and copy its public URL (e.g. http://dl.dropbox.com/u/54552252/what-is-time.ipynb)
+paste the public URL at  http://nbviewer.ipython.org/
+notebook is published as HTML at URL=http://nbviewer.ipython.org/url/dl.dropbox.com/u/54552252/what-is-time.ipynb
+
 
 :
 

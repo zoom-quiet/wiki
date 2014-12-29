@@ -1,6 +1,5 @@
 {
 "plugins": [
-        "maxiang",
         "disqus"
     ],
     "pluginsConfig": {

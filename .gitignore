@@ -1,6 +1,9 @@
 wiki/chaos2py4scientist/_book
 _book/
 
+output
+output/
+
 .html
 .tmp
 
