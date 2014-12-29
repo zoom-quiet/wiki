@@ -41,7 +41,7 @@ def reserve():
     build()
     serve()
 
-def cafe4wiki():
+def wiki2cafe():
     build()
     local('cd {deploy_path} && '
             'pwd && '
@@ -54,6 +54,7 @@ def cafe4wiki():
             'date '.format(**env)
           )
 
+'''
 def cafe4gitbook():
     local('cd {py2sc} && '
             'pwd && '
@@ -70,4 +71,4 @@ def cafe4gitbook():
             #'ls -la && '
             'date '.format(**env)
           )
-
+'''
