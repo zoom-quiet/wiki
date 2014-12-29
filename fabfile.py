@@ -11,16 +11,16 @@ env.cafe_pages = '../../../7niu_zoomquiet/gitbook/'
 #env.cafe_pages = '../../../42chaos2py4scientist/cafe_OpenMind/'
 env.qrsync_bin = '/opt/bin/7niu_package_darwin_amd64/qrsync'
 env.qrsync_cfg = '../7niu-zoomquiet.json'
-def pub7niu():
+def sync7niu():
     local('pwd && '
             '{qrsync_bin} {qrsync_cfg} && '
             'date '.format(**env)
           )
 
-def pub2all():
+def pub7niu():
     build()
     book7niu()
-    pub7niu()
+    sync7niu()
     #cafe4wiki()
     #cafe4gitbook()
 
