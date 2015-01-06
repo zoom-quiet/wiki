@@ -1,5 +1,8 @@
 [TOC]
 
+『学徒知识学习』（apprenticeship learning），它依赖于这样一种假设：『知晓、思考、理解皆基于实践产生』。」其实，在现代社会的工作场合中，富有经验的老员工与菜鸟员工之间的知识传递，也属于这类「学徒知识学习
+
+
 [Advanced Scientific Programming in Python [start]](https://python.g-node.org/wiki/)
 
 Preliminary Program

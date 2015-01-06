@@ -171,7 +171,12 @@ dl dt {
 
 code {
   font-family: Courier, 'Courier 10 Pitch', 'Courier New', monospace;
-  line-height: 18px; }
+  line-height: 18px; 
+/*150104 ZQ appended*/
+  font-size: 110%;
+  background-color: #f5f5f1;
+
+}
 
 pre {
   font-family: Menlo, 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, 'Courier 10 Pitch', 'Courier New', monospace;
