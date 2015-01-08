@@ -28,3 +28,10 @@ base: markdown menu
     https://gist.github.com/cloudsben/605993
 frok : http://wiki.woodpecker.org.cn/moin/ZoomQuiet/book;
 *************************/
+/*150108 ZQ for appended logo 32x32
+with body #breadcrumbs
+*/
+div.site-logo{
+    position: absolute;
+    top: 0px;
+}

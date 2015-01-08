@@ -16,8 +16,10 @@ body {
     border-bottom: 2px solid #f6f6f6;
     height: 28px;
     margin: 0;
-    padding: 0;
-    width: 650px; }
+    /*150108 ZQ for appended logo 32x32*/
+padding: 0 0 0 3em;
+width: 600px; 
+  }
     body #breadcrumbs li {
       float: left;
       list-style: none;
