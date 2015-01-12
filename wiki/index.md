@@ -39,7 +39,7 @@
 
 
 ## 是也乎
-- 原版首页 ~ [MarkDoc](/orig-index) 
+- 原版首页 ~ [Markdoc Documentation » Index](http://markdoc.org/)
 - 当前仓库:
     + 内容: [wiki4zq/markdoc4zq - GitCafe](https://gitcafe.com/wiki4zq/markdoc4zq)
     + 发布: [wiki4zq/wiki4zq - GitCafe](https://gitcafe.com/wiki4zq/wiki4zq)
