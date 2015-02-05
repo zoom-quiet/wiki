@@ -1,6 +1,5 @@
-[TOC]
-
 # 极简 Python 上手导念
+[TOC]
 
 
 好吧,这是有关如何在 
@@ -133,15 +132,28 @@
     - Python 这种通用脚本语言, 就是能用 2% 的功能,完成 80% 常见任务的哪
     - 如果只是要通过 Python 了解什么是程序猿生活, 到此,基本已经有足够的体验可以和 码农们愉快的沟通了!
 - 还有兴趣?
-    + 参考: [vinta/awesome-python](https://github.com/vinta/awesome-python)
-    + 了解 Python 的任性范畴
+    + 参考: [vinta/awesome-python](https://github.com/vinta/awesome-python) 了解 Python 的任性范畴
     + 参考: [aosabook/500lines](https://github.com/aosabook/500lines) 体验一下 500 行以内的 Python 程序能折腾出什么来
+    + 参考: [探索一门编程语言 | 轻单](https://qdan.me/list/VL46v0rYbAgUsSIS) 扎下去
 
 真心就没有然后了,
 你已经是名合格的 Pythonista 了,
 自在的使用 Python 来完成梦想吧!
 
+## 知乎
 
+- [你是如何自学 Python 的？ - 陈铮的回答 - 知乎](http://www.zhihu.com/question/20702054/answer/15908321)
+
+
+## 参考:
+
+
+- [Starting A Python Project The Right Way](http://jeffknupp.com/blog/2014/02/04/starting-a-python-project-the-right-way/)
+- [First Steps With Python - Real Python](https://realpython.com/learn/python-first-steps/)
+    - [jacebrowning/template-python](https://github.com/jacebrowning/template-python)
+    - [audreyr/cookiecutter](https://github.com/audreyr/cookiecutter)
+    - [rcarmo/ink-bottle](https://github.com/rcarmo/ink-bottle)
+- ...
 
 
 ## 是也乎
