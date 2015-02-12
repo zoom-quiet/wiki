@@ -81,13 +81,14 @@ code.org
 - [简明 Python 教程](http://woodpecker.org.cn/abyteofpython_cn/chinese/)
 - [零基础学Python · qiwsir/ITArticles](https://github.com/qiwsir/ITArticles/blob/master/BasicPython/index.md)
 - [Python快速教程 - Vamei - 博客园](http://www.cnblogs.com/vamei/archive/2012/09/13/2682778.html)
+
 - ...etc.
 
 
 ## 推荐参考
 - [Overview — Python 3.4.2 documentation](https://docs.python.org/3/)
 - [Python Module of the Week - Python Module of the Week](http://pymotw.com/2/contents.html)
-
+- [分享ipython notebook - 小明明s à domicile](http://dongweiming.github.io/blog/archives/ji-jiang-zai-bpugfen-xiang/)
 
 少即是多...
 
