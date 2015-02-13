@@ -60,38 +60,37 @@ BINGO!
 
 先初始化测试表:
 
-```
-zoomq=# CREATE TABLE json_test (
-      id serial primary key,
-      data jsonb
-    );
+    zoomq=# CREATE TABLE json_test (
+          id serial primary key,
+          data jsonb
+        );
 
-zoomq=# \d json_test
-                         Table "public.json_test"
- Column |  Type   |                       Modifiers
---------+---------+--------------------------------------------------------
- id     | integer | not null default nextval('json_test_id_seq'::regclass)
- data   | json    |
-Indexes:
-    "json_test_pkey" PRIMARY KEY, btree (id)
+    zoomq=# \d json_test
+                             Table "public.json_test"
+     Column |  Type   |                       Modifiers
+    --------+---------+--------------------------------------------------------
+     id     | integer | not null default nextval('json_test_id_seq'::regclass)
+     data   | json    |
+    Indexes:
+        "json_test_pkey" PRIMARY KEY, btree (id)
 
-zoomq=# INSERT INTO json_test (data) VALUES 
-      ('{}'),
-      ('{"a": 1}'),
-      ('{"a": 2, "b": ["c", "d"]}'),
-      ('{"a": 1, "b": {"c": "d", "e": true}}'),
-      ('{"b": 2}');
+    zoomq=# INSERT INTO json_test (data) VALUES 
+          ('{}'),
+          ('{"a": 1}'),
+          ('{"a": 2, "b": ["c", "d"]}'),
+          ('{"a": 1, "b": {"c": "d", "e": true}}'),
+          ('{"b": 2}');
 
-zoomq=# SELECT * FROM json_test;
- id |                                data
-----+---------------------------------------------------------------------
-  1 | {}
-  2 | {"a": 1}
-  3 | {"a": 2, "b": ["c", "d"]}
-  4 | {"a": 1, "b": {"c": "d", "e": true}}
-  5 | {"b": 2}
-(5 rows)
-```   
+    zoomq=# SELECT * FROM json_test;
+     id |                                data
+    ----+---------------------------------------------------------------------
+      1 | {}
+      2 | {"a": 1}
+      3 | {"a": 2, "b": ["c", "d"]}
+      4 | {"a": 1, "b": {"c": "d", "e": true}}
+      5 | {"b": 2}
+    (5 rows)
+
 
 可以看到,可以很好的支持各种情况
 
@@ -102,47 +101,45 @@ zoomq=# SELECT * FROM json_test;
 是绝对的首选模块.
 
 
-```
-import psycopg2
-import psycopg2.extras
+    import psycopg2
+    import psycopg2.extras
 
-conn = psycopg2.connect("dbname=zoomq")
-cur = conn.cursor()
-cur.execute("SELECT * FROM json_test;")
-data = cur.fetchall()
-conn.commit()
-print data
+    conn = psycopg2.connect("dbname=zoomq")
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM json_test;")
+    data = cur.fetchall()
+    conn.commit()
+    print data
 
-_sql = '''INSERT INTO json_test (data) VALUES('
-        {"name":"张三"
-            ,"age":18
-            ,"birthday":"2013-03-03"
-        }
-    ');'''
-cur.execute(_sql)
-cur.execute("SELECT * FROM json_test WHERE data ->> 'age' = '18';")
-data = cur.fetchone()
+    _sql = '''INSERT INTO json_test (data) VALUES('
+            {"name":"张三"
+                ,"age":18
+                ,"birthday":"2013-03-03"
+            }
+        ');'''
+    cur.execute(_sql)
+    cur.execute("SELECT * FROM json_test WHERE data ->> 'age' = '18';")
+    data = cur.fetchone()
 
-conn.commit()
-print data, type(data), data[1]['name']
+    conn.commit()
+    print data, type(data), data[1]['name']
 
-# from psycopg2.extras.Jsonで辞書型を変換
-cur.execute(u"INSERT INTO json_test(data) VALUES (%s)",
-    [psycopg2.extras.Json({'age': 11
-        , 'name':'是也乎'
-        , "birthday":"2013-11-11"
-        })
-    ])
-cur.execute("SELECT * FROM json_test WHERE data ->> 'age' = '11';")
-data = cur.fetchone()
+    # from psycopg2.extras.Jsonで辞書型を変換
+    cur.execute(u"INSERT INTO json_test(data) VALUES (%s)",
+        [psycopg2.extras.Json({'age': 11
+            , 'name':'是也乎'
+            , "birthday":"2013-11-11"
+            })
+        ])
+    cur.execute("SELECT * FROM json_test WHERE data ->> 'age' = '11';")
+    data = cur.fetchone()
 
-conn.commit()
-print data, type(data), data[1]['name']
+    conn.commit()
+    print data, type(data), data[1]['name']
 
-cur.close()
-conn.close()
-return None
-```
+    cur.close()
+    conn.close()
+    return None
 
 执行后的 `psql` 查询结果
 
@@ -167,6 +164,46 @@ return None
 - [Schinckel](http://schinckel.net/about/) 的神入:
     + [Python, postgres and jsonb](http://schinckel.net/2014/05/24/python%2C-postgres-and-jsonb/)
     + [Querying JSON in Postgres - Schinckel.net](http://schinckel.net/2014/05/25/querying-json-in-postgres/)
+- 以及 Pg周刊中非常应景的:
+    + [Query JSON with Postgres 9.4 and Rails 4.2](http://robertbeene.com/rails-4-2-and-postgresql-9-4/?utm_source=postgresweekly&utm_medium=email)
+
+
+
+## 是也乎
+在这一快速验证过程中,相关的体验:
+
+- MAC 系统中, 果断使用 [Postgres.app](http://postgresapp.com/) 渠道安装最省心!
+    + 唯一注意的是要根据相关追问:
+        * [python - Psycopg2 image not found - Stack Overflow](http://stackoverflow.com/questions/16407995/psycopg2-image-not-found)
+        * [python - Libssl and libcrypto causing dyld: Library not loaded: /usr/lib/libpq.5.dylib - Stack Overflow](http://stackoverflow.com/questions/13643452/libssl-and-libcrypto-causing-dyld-library-not-loaded-usr-lib-libpq-5-dylib)
+        * [Frequently Asked Questions — Psycopg 2.5.5.dev0 documentation](http://initd.org/psycopg/docs/faq.html)
+
+    + 在 `~/.bash_profile` 中追加
+
+
+> export DYLD_LIBRARY_PATH=/Applications/Postgres.app/Contents/Versions/9.3/lib:$DYLD_LIBRARY_PATH
+
+否则, `import psycopg2` 是要失败的...
+
+
+- 残念的是,上述配置后发生:
+    + [MacのGeant4でlibjpegなどの画像ライブラリまわりでdyldエラーが出るとき - 週末はいつも晴れ](http://ikarino99.hatenablog.com/entry/2014/12/11/130101) 
+    + `subl` 无法从命令行打开指定文件了, 这得另外解决.
+    + 有相关支招: [python - Psycopg2 image not found - Stack Overflow](http://stackoverflow.com/questions/16407995/psycopg2-image-not-found)
+    + 但是,又不兼容 psycopg2 的使用
+    + 好在只是测试, 可以先将就着
+- pg 的管理界面, 果断是 [PG Commander](https://eggerapps.at/pgcommander/) 最妥贴!
+    + 但是 `psql` 其实也足够的了 ;-)
+- 不过,在各种文档中追查时, 果断是 [Dash](http://kapeli.com/dash) 最妥贴!
+    + 当然要点銭来停止保护视力的努力
+    + 最后实在没忍住,买了一整年的...
+
+
+`PS:`
+
+- 最近任性的购买服务还有: [Boomerang for Gmail](http://www.boomeranggmail.com/faq.html)
+    + ![](http://www.boomeranggmail.com/images/Logo.png)
+    + `回旋镖` 服务!
 
 ## 修订
 
