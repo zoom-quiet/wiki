@@ -23,6 +23,11 @@
     + 而 Pg 从9.2开始引入了json数据类型
     + 这简直就是用 RMDB 的稳定性,用 MongoDB 的自然 NoSQL 哪
 
+参考: 
+
+- [Why JSON in PostgreSQL is Awesome](https://functionwhatwhat.com/json-in-postgresql/)  
+- [JSON Select Speed Test with MongoDB and PostgreSQL](http://tiborsimko.org/postgresql-mongodb-json-select-speed.html)
+
 ## 折腾
 
 问题来了, 怎么进行检验思路呢!?
@@ -161,6 +166,7 @@ BINGO!
     + [PythonからPostgreSQL 9.3.2のjson列へデータの登録、検索(Psycopg2) - Symfoware](http://symfoware.blog68.fc2.com/blog-entry-1258.html)
     + [psycopg2.extras – Miscellaneous goodies for Psycopg 2 — Psycopg 2.5.5.dev0 documentation](http://pythonhosted.org//psycopg2/extras.html#psycopg2.extras.Json)
     + [PythonからPostgreSQL 9.3.2のhstore列へデータの登録、検索(Psycopg2)](http://symfoware.blog68.fc2.com/blog-entry-1259.html)
+    + [PostgreSQL JSON/JSONBの文書操作とMongoDBの文書操作 - 日々の記録 別館](http://d.hatena.ne.jp/nuko_yokohama/20141228/1419737030)
 - [Schinckel](http://schinckel.net/about/) 的神入:
     + [Python, postgres and jsonb](http://schinckel.net/2014/05/24/python%2C-postgres-and-jsonb/)
     + [Querying JSON in Postgres - Schinckel.net](http://schinckel.net/2014/05/25/querying-json-in-postgres/)
