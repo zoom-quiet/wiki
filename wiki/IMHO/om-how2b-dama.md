@@ -134,6 +134,19 @@ gmail 200 个列表
     - http://zoomq.qiniudn.com/ZQCollection/map/cpyug_historic_mapping.png
 
 
+OS 以及其它的变迁:
+
+- NT时代
+    + 从:"我自豪我D版"
+    + 到:"正确自由软件"
+    + ![levelradar_demo](http://s5.zoomquiet.io/131113-MyTools/i/levelradar_demo.png)
+    + 有意识的进行工具箱的替换,积累
+        * TotleCommander -> uCommander
+        * MPlayer
+- Linux 时代
+    + ![zqtools_mapping](http://s5.zoomquiet.io/131113-MyTools/i/map/zqtools_mapping.jpg)
+- MAC 的意外
+
 ### 明心
 ~ 尝试将世界的理解分享
 
