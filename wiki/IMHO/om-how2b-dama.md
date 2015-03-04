@@ -19,7 +19,7 @@
 - 15' QA
 
 ### 本心
-~ FLOSS前
+~ FLOSS前, 只能积累自个儿的世界
 
 - 504 部落
 - 国营504 厂,军工厂,浓缩铀, 传说三年灾害时,还定期发苹果
@@ -51,7 +51,9 @@
     + 两叔叔两娘娘,7个舅舅
     + 高中前: 上海/武汉/成都/广州/西安 都去过
 
+
 综上,结果是:
+
 - 幼儿园故事大王, 现编现说类型故事一小时, 小朋友们听的下去,不断篇儿
 - 小学,辩论专家, 老师/同学 永远说服不能,只能诉之以暴力来阻止俺的唐僧式攻击
     + 首届智力竞赛,因为无聊,和小伙伴核对高速答完的卷子,被计0分
@@ -96,12 +98,13 @@
     * 通过 Python 获得了上京工作机会
 
 ### 他心
-~ FLOSS后
+~ FLOSS后 关注他人的世界
 
 
 ![040503-ZqNet](http://zoomq.qiniudn.com/ZQCollection/map/040503-ZqNet.gif)
 
 - 大图: [040503-ZoomqPathNet.png（PNG 图像，1933x3100 像素）](http://zoomq.qiniudn.com/ZQCollection/map/040503-ZoomqPathNet.png)
+- 代码: [040503-ZqNet.dot](https://bitbucket.org/ZoomQuiet/tangle/src/a3c2b8cd6793568c41d28e8dade33af466aa8ffe/dot/zoomquiet.org/040503-ZqNet.dot?at=default)
 
 社区参与小览:
 
@@ -131,7 +134,8 @@ gmail 200 个列表
     - http://zoomq.qiniudn.com/ZQCollection/map/cpyug_historic_mapping.png
 
 
-## 明心
+### 明心
+~ 尝试将世界的理解分享
 
 - 不知己不知 ~ Unknow Unknow
 - 不知己知何 ~ Unknow Know
@@ -139,7 +143,7 @@ gmail 200 个列表
 - 知己何不知 ~ Know Unknow
 
 
-## 大妈
+### 大妈
 ~ 的成分
 
 
@@ -148,25 +152,30 @@ gmail 200 个列表
 
 - 以往相关演讲:
     + 050701 ~ [SNS 及 KM 导览](http://zoomquiet.org/res/s5/050613-sns-km/SNSintro/)
-    + [KsKM(powered by S5)v1.1~090401](http://s5.zoomquiet.io/090401-KsKM/s5.html)
+    + 090401 ~ [KsKM(powered by S5)v1.1](http://s5.zoomquiet.io/090401-KsKM/s5.html)
     + 100729 ~ [时间管理～持续的心智进化之旅 (powered by S5)](http://s5.zoomquiet.io/100729-ks-timemana/index.html)
     + 100918 ~ [我的工具箱](http://zoomquiet.org/res/s5/100918-MyTools/rst2s5/)
     + 110311 ~ [点解KM](http://s5.zoomquiet.io/110311-why-km/index.html)
     + 140303 ~ [知.时管理](http://s5.zoomquiet.io/140303-time4km/index.html)
 - 以往关键URI:
     + [ZoomQuietAbt - Woodpecker Wiki for CPUG](http://wiki.woodpecker.org.cn/moin/ZoomQuietAbt)
-    + 
+    + [我的”怪癖” (作业)_Zoomq_新浪博客](http://blog.sina.com.cn/s/blog_538099650100000a.html)
+- 以往社区观点:
+    + [SllPrjZQ - sociallearnlab - 社区过程改进 实践参考 ZoomQuiet版 - Google Project Hosting](https://code.google.com/p/sociallearnlab/wiki/SllPrjZQ)
+    + [HowToBuildBookOnline - openbookproject - 经验分享:"如何组织在线图书工程" - O.B.P~Open Book Proj.中文蟒样开放图书计划! - Google Project Hosting](https://code.google.com/p/openbookproject/wiki/HowToBuildBookOnline)
 - [OliverDing 's Weibo_Weibo](http://weibo.com/1667781677/C3uVTkC8C?type=comment)
 
-> 讨论混合媒体时代如何建设专业协会。
-> 我的邮件目录：
-> 1. 设定愿景；
-> 2. 社群规划；
-> 3. 品牌规划；
-> 4. 日常活动；
-> 5. 内容集展；
-> 6. 社交传播。。。
-> 专业协会的建设，其实就是社群的建设，在混合媒体时代，更加需要善用各类媒体和网络资源，服务成员，贡献社会。 
+讨论混合媒体时代如何建设专业协会:
+
+    我的邮件目录：
+    1. 设定愿景；
+    2. 社群规划；
+    3. 品牌规划；
+    4. 日常活动；
+    5. 内容集展；
+    6. 社交传播。。。
+    专业协会的建设，其实就是社群的建设，
+    在混合媒体时代，更加需要善用各类媒体和网络资源，服务成员，贡献社会。 
 
 
 
