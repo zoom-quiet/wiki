@@ -151,7 +151,8 @@
 
 ## 参考:
 
-
+- [The Python Tutorial — Python 3.4.3rc1 documentation](https://docs.python.org/3/tutorial/index.html)
+- [The Python Tutorial — Python 2.7.9 documentation](https://docs.python.org/2.7/tutorial/index.html)
 - [Starting A Python Project The Right Way](http://jeffknupp.com/blog/2014/02/04/starting-a-python-project-the-right-way/)
 - [First Steps With Python - Real Python](https://realpython.com/learn/python-first-steps/)
     - [jacebrowning/template-python](https://github.com/jacebrowning/template-python)
