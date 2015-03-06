@@ -95,6 +95,9 @@
 
 - 大妈曰: "学习 Py 的目标本身,从来不是 Python ,
 而是只有通过`编程思维`才能理解/接触到的真实世界的`Cyber维度`!"
+- 参考: [无论强人工智能能否出现，人类的未来注定灰暗 - 歪理邪说](http://mp.weixin.qq.com/s?__biz=MjM5MTE4Nzk1NA==&mid=203366420&idx=1&sn=32d72cc75f20548a5fdc7773bc447d63&scene=1&key=8ea74966bf01cfb6ef39b1207fc78f32f338de1f9fea003a72873a17bfdd4e3e5b8c35b2c276f9e54a1315dce72bcfb2&ascene=0&uin=MTg1NDU4NTY4MQ%3D%3D&devicetype=iMac+MacBookPro8%2C2+OSX+OSX+10.10.2+build(14C109)&version=11020012&pass_ticket=T1IpLO8MrBDGmIARrOWn2PGmsy66%2Fn8xIjCvvqnpWwlL8pBzpiuxX0Zfp91E9Kiq)
+    + "...对着系统说我无能为力的办事人员，他其实已经是程序在现实世界的延伸了"
+    + 想跳出这种境地? 只能通过编程思想的解放.
 
 ## QA
 
