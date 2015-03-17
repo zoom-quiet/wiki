@@ -59,7 +59,7 @@
 但是,以上三个基本需求,无一能在当前已知所有移动播放器中作到:
 
 - 选择艺人, 只有 Google Play音乐 基本作到舒心了:
-    + ![150205-gplayer-lib.png（PNG 图像，370x489 像素）](http://zoomq.qiniudn.com/ZQCollection/snap/150205-gplayer-lib.png)
+    + ![150205-gplayer-lib.png(PNG 图像,370x489 像素)](http://zoomq.qiniudn.com/ZQCollection/snap/150205-gplayer-lib.png)
     + 点击进入 `我的乐库` 优先进入 音乐人, 而不是 其它 tab
     + 所有卡片用的是现有专辑的拼贴
     + 杯具的是, 从本地导入音乐的过程,以及目录 是无法控制的
@@ -100,7 +100,7 @@ xiami 也好,其它音乐应用也好, 走的都是 ucg 模式,以便避开版�
     + 人为形成多重等待
     + 并在错误的信息基础上,几乎无法进行合理的控制识别
 - 最终形成类似情景:
-    + ![150205-xiami-local-chaos.jpg（JPEG 图像，720x1280 像素） - 缩放 (59%)](http://zoomq.qiniudn.com/ZQCollection/snap/150205-xiami-local-chaos.jpg?imageView2/2/w/360)
+    + ![150205-xiami-local-chaos.jpg(JPEG 图像,720x1280 像素) - 缩放 (59%)](http://zoomq.qiniudn.com/ZQCollection/snap/150205-xiami-local-chaos.jpg?imageView2/2/w/360)
     + 根据音乐人信息, 从专辑列表,下载多个专辑后
     + 在音乐人界面, 看到的就是这种专辑顺序混杂的情景
     + 实际播放时,可以想象是多么难受的事儿
