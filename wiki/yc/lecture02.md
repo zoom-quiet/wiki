@@ -1,4 +1,5 @@
-# 周琦/大妈 @ZoomQuiet
+# YC02 团队与执行
+~ 周琦/大妈 @ZoomQuiet
 [TOC]
 
 ## 自学

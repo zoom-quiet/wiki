@@ -1,4 +1,5 @@
-# 琦 周 @ZoomQuiet
+# YC01 你真的愿意创业嘛
+~ 琦 周 @ZoomQuiet
 ~ 私人直觉感想
 
 [TOC]
