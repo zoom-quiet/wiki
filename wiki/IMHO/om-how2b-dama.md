@@ -93,7 +93,7 @@
     + 可惜真正自学出来能用的只有:
         * 表形码输入法
         * PhotoShop
-        * CroeDraw
+        * CorelDraw
         * DHTML
 - 常州工作一年半:
     + 先在联想的一个三产系统集成公司呆了一个月, 发现对硬件无兴趣,拉伤了腰肌后退出
@@ -159,7 +159,7 @@ OS 以及其它的变迁:
     + 到:"正确自由软件"
     + ![levelradar_demo](http://s5.zoomquiet.io/131113-MyTools/i/levelradar_demo.png)
     + 有意识的进行工具箱的替换,积累
-        * TotleCommander -> uCommander
+        * TotleCommander -> muCommander
         * MPlayer
         * ... 用两年时间将所有常用工具替换为跨平台的开源/开源自由软件
 - Linux 时代
