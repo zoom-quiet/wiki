@@ -4,7 +4,7 @@
 
 [TOC]
 
-- 原发: [Lecture 1作业提交（YC创业课001期） | yetable](http://yetable.com/s/xke4un/lecture_1_yc_001)
+- 原发: [Lecture 1作业提交(YC创业课001期) | yetable](http://yetable.com/s/xke4un/lecture_1_yc_001)
 
 ## 创业
 从 99 年进入职场,回顾一下,发现一直处于被创业的状态:
