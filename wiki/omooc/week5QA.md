@@ -3,7 +3,7 @@
 [TOC]
 
 - 单口: 大妈
-- 书记: ?
+- 书记: ??
 - 录音: 
     + [150417_dama1_review.MP3](http://openmindclub.qiniudn.com/res/tapes/150417-dama-qa/150417_dama1_review.MP3)
     + [150417_dama2_coding.MP3](http://openmindclub.qiniudn.com/res/tapes/150417-dama-qa/150417_dama2_coding.MP3)
@@ -13,6 +13,8 @@
 
 **[OMOOC.py - zoomquiet - XMind](http://www.xmind.net/m/83Sr/)**
     
+
+
 
 ## 现场作业
 
