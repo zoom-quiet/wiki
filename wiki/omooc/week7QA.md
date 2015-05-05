@@ -1,4 +1,4 @@
-# OMOOC.py week6 QA
+# OMOOC.py week7 QA
 
 [TOC]
 
