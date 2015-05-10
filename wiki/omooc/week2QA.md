@@ -1,4 +1,4 @@
-# OMOOC.py week2 QA
+# OMOOC.py week2 QA 列表
 
 [TOC]
 

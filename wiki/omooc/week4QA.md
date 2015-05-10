@@ -1,4 +1,4 @@
-# OMOOC.py week4 QA
+# OMOOC.py week4 QA 四大反转
 
 [TOC]
 
@@ -9,7 +9,7 @@
     + [150412_dama2_qa.MP3](http://openmindclub.qiniudn.com/res/tapes/150412-dama-qa/150412_dama2_qa.MP3)
 
 ## 暖场
-~~ ~~最后一次周日QA
+~最后一次周日QA
 
 - QA 时间变更, 期望 周5
 - 术语表等关键资料都通过列表释放,同时 gitbook 形式索引公开
@@ -191,4 +191,3 @@ OMOOC.py 形成以下信息回路:
 - 攻坚问题:可以个人或者协同
     + 重点是应该有记录,怎么舒服怎么来
 
-    
