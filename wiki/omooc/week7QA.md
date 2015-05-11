@@ -5,7 +5,8 @@
 - 群口: 大妈+四组大腿
 - 书记: Frank
 - 录音: 
-    + ?
+    + [150508_qa_dama.MP3](http://openmindclub.qiniudn.com/res/tapes/150508-qa-team/150508_qa_dama.MP3)
+    + ??
 
 ## 记要
 ~大妈的团队协作介绍
