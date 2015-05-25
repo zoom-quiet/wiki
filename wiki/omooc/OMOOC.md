@@ -231,6 +231,15 @@
 
 参考: [有关邮件列表 | PyChina.org Static Wiki](http://wiki.pychina.org/hd/AbtMaillingList.html)
 
+## week9d5 QA
+
+- Q: 什么样的人能教 py ?
+- A: 目测是同理心强大,中文好的
+    + 同理心= 对于小白问题有耐心
+    + ~~> 记得当初自个儿的迷妄,能给出合理的比喻/隐喻
+    + 中文好= 表达能力好，不会因为说不出来而发火？
+    + ~~> 接收能力也好,能从对方的反馈中,抓住关键困惑,给予合适的引导
+
 ## 参考:
 
 - [海选文章:18 学习,学习,再学习 | GDG Livin ZhuHai Life;-)](http://blog.zhgdg.org/2014-02/hd18-learn-forever/)
