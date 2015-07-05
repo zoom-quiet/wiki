@@ -231,6 +231,20 @@
 
 参考: [有关邮件列表 | PyChina.org Static Wiki](http://wiki.pychina.org/hd/AbtMaillingList.html)
 
+### 禁止事项清单
+
+一些禁止事项要求要求:
+
+- 永远不用中文名来作任何命名
+- 永远不用拼音来作任何命名
+- 永远使用 UTF-8 编码
+- 永远使用 unix 分行
+- 尽可能不使用 全角标点
+- 尽可能使用 sublime text 等现代编辑器
+- 配置编辑器将 tab 替换为 4个空格
+- ...
+
+
 ## week9d5 QA
 
 - Q: 什么样的人能教 py ?
