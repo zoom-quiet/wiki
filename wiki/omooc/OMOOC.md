@@ -245,7 +245,7 @@
 - ...
 
 
-## week9d5 QA
+### week9d5 QA
 
 - Q: 什么样的人能教 py ?
 - A: 目测是同理心强大,中文好的
@@ -261,3 +261,21 @@
 - [最好的学习方法,就是教别人,嘉力丰大课堂,人才中心,GAREFU嘉力丰](http://www.garefu.com/Talent_view.asp?id=146)
 - [重新思考最好的本科教育:The Minerva Project-评论-教育思想网](http://www.eduthought.net/index.php?a=news_x&m=News&id=1126)
 
+## 资源
+根据预先规划,在试验课程结束后,应该形成可出版的图书!
+当前基调是: 
+
+    世界上最好的非专业 Py 入门自学指南
+
+主要资源:
+
+- [OMOOC.py 首期学员所有作业和文档](https://github.com/OpenMindClub/OMOOC.py/wiki)
+- 俺私人记要: [ls /omooc Zoom.Quiet Personal Static Wiki](http://wiki.zoomquiet.io/omooc/)
+- 助教文案集(公开部分): [介紹 | OMOOC.py ](http://openmindclub.gitbooks.io/omooc-py/content/)
+- 草稿仓库: [ZoomQuiet / omooc_py_book — Bitbucket](https://bitbucket.org/ZoomQuiet/omooc_py_book)
+- 以及所有远程分享的录音: [Index of /res/tapes {gen. by gen4idx.py v13.4.18 from Zoom.Quiet} ](http://openmindclub.qiniudn.com/res/tapes/index.html    )
+    
+
+
+
+    
