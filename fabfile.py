@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from fabric.api import *
 import fabric.contrib.project as project
 import os
@@ -5,6 +7,40 @@ import os
 # Local path configuration (can be absolute or relative to fabfile)
 env.deploy_path = 'output'
 #env.deploy_path = '.html'
+env.static_path = '_static'
+
+def build():
+    local('markdoc build && '
+            #'ls -la && '
+            'rsync -avzP4 {static_path}/media/ {deploy_path}/media/ && '
+            'pwd '.format(**env)
+        )
+
+def serve():
+    local('markdoc serve')
+
+def reserve():
+    build()
+    serve()
+
+def CNAME():
+    local('ls -la {deploy_path}/ && '
+            'cp -f {static_path}/CNAME {deploy_path}/ && '
+            'pwd '.format(**env)
+        )
+
+def hg_pahes():
+    local('cd {deploy_path} && '
+            'pwd && '
+            'git st && '
+            'git add --all . && '
+            'git ci -am "re-build from local by markdoc @MBP111216ZQ" && '
+            #'git pu cafe gitcafe-page '
+            'git pu && '
+            'date '.format(**env)
+          )
+
+'''
 env.py2sc = 'wiki/chaos2py4scientist/'
 env.book = '_book/'
 env.cafe_pages = '../../../7niu_zoomquiet/gitbook/'
@@ -16,7 +52,6 @@ def sync7niu():
             '{qrsync_bin} {qrsync_cfg} && '
             'date '.format(**env)
           )
-
 def pub7niu():
     build()
     book7niu()
@@ -33,20 +68,6 @@ def book7niu():
             'date '.format(**env)
           )
 
-env.static_path = '_static'
-def build():
-    local('markdoc build && '
-            #'ls -la && '
-            'rsync -avzP4 {static_path}/media/ {deploy_path}/media/ && '
-            'pwd '.format(**env)
-        )
-
-def serve():
-    local('markdoc serve')
-def reserve():
-    build()
-    serve()
-
 def wiki2cafe():
     build()
     local('cd {deploy_path} && '
@@ -60,7 +81,6 @@ def wiki2cafe():
             'date '.format(**env)
           )
 
-'''
 def cafe4gitbook():
     local('cd {py2sc} && '
             'pwd && '

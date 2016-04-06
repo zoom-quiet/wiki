@@ -3,6 +3,8 @@
 # Zoom.Quiet 的私人维基
 ~ 141202 re-publish
 
+[TOC]
+
 ## 背景
 参考: [自在的行者社区](https://code.google.com/p/cpyug/wiki/CpyUg)
 
@@ -39,10 +41,17 @@
 
 
 ## 是也乎
-- 原版首页 ~ [Markdoc Documentation » Index](http://markdoc.org/)
+
 - 当前仓库:
+    + 内容: [zoom-quiet/wiki: markdoc as static wiki](https://github.com/zoom-quiet/wiki)
+    + 发布: [zoom-quiet/wiki at gh-pages](https://github.com/zoom-quiet/wiki/tree/gh-pages)
+- 原版首页 ~ [Markdoc Documentation » Index](http://markdoc.org/)
+- 过期仓库:
     + 内容: [wiki4zq/markdoc4zq - GitCafe](https://gitcafe.com/wiki4zq/markdoc4zq)
     + 发布: [wiki4zq/wiki4zq - GitCafe](https://gitcafe.com/wiki4zq/wiki4zq)
+    + 原因:
 
+
+![404 gitcafe forever](http://zoomq.qiniudn.com/ZQCollection/snap/404-500/404_gitcafe_160401.png?imageView2/2/w/420)
 
 
