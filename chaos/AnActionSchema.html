@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+    "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+      xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/">
+  
+  <head>
+    
+    
+      
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+      
+      
+      <title>
+        一种行为模式分析 |
+        Zoom.Quiet Personal Static Wiki 
+      </title>
+      
+      
+        <!-- YUI CSS reset, fonts, base -->
+        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.0.0/build/cssreset/reset-min.css&amp;3.0.0/build/cssfonts/fonts-min.css&amp;3.0.0/build/cssbase/base-min.css" media="screen, projection" />
+        
+        <link rel="stylesheet" type="text/css" href="../media/css/custom.css" media="screen, projection" />
+        <link rel="stylesheet" type="text/css" href="../media/css/style.css" media="screen, projection" />
+        <link rel="stylesheet" type="text/css" href="../media/css/pygments.css" media="screen, projection" />
+      
+      
+      
+      
+      
+        
+          <!-- Google Analytics -->
+          <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-2331528-6']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+              var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+              ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+            })();
+          </script>
+        
+      
+    
+  </head>
+  
+  <body >
+    
+      
+      
+    
+<div class="site-logo">
+  <img src="http://zoomq.qiniudn.com/logos/zq-eyes-IMG_1987-64x64.JPG?imageView2/2/w/32" />
+  </div>
+
+        
+          
+  
+    <ol id="breadcrumbs">
+      
+        <li class="crumb-0 not-last">
+          
+            <a href="../">index</a>
+          
+        </li>
+      
+        <li class="crumb-1 not-last">
+          
+            <a href="./">chaos</a>
+          
+        </li>
+      
+        <li class="crumb-2 last">
+          
+            AnActionSchema
+          
+        </li>
+      
+    </ol> <!-- ol#breadcrumbs -->
+  
+
+        
+      
+      
+      <div id="content">
+        
+        
+        
+        <h1 id="_1">一种行为模式分析</h1>
+<p>~ 论直觉的海量数据分析</p>
+<div class="toc">
+<ul>
+<li><a href="#_1">一种行为模式分析</a><ul>
+<li><a href="#_2">背景</a></li>
+<li><a href="#_3">数据</a></li>
+<li><a href="#_4">思路</a><ul>
+<li><a href="#_5">间隔</a></li>
+<li><a href="#_6">聚合</a></li>
+<li><a href="#_7">预测</a></li>
+<li><a href="#hamming-distance">Hamming Distance</a></li>
+<li><a href="#_8">其它</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="_2">背景</h2>
+<ul>
+<li>收集有一个对象集</li>
+<li>每个对象仅关注一种行为</li>
+<li>此行为只记录关注每天是否进行</li>
+</ul>
+<h2 id="_3">数据</h2>
+<ul>
+<li>每个对象对应一行数据</li>
+<li>每行数据只记录有某个日期是否有此行为</li>
+<li>可压缩表述为:</li>
+</ul>
+<blockquote>
+<p>ID 10001110001010101001001010000000</p>
+</blockquote>
+<ul>
+<li>特征字串中, 1代表行为发生, 0相反</li>
+<li>特征字串长度为对象行为记录时长</li>
+<li>每个对象的行为记录时长不相同</li>
+</ul>
+<h2 id="_4">思路</h2>
+<p>试从以上数据中分析出:</p>
+<ul>
+<li>对象的行为模式有多少种</li>
+<li>各有什么特征</li>
+<li>边界条件/表现/描述应该是什么</li>
+</ul>
+<p>以下是各种设想...</p>
+<h3 id="_5">间隔</h3>
+<ul>
+<li>计算每行数据中,日期间隔</li>
+<li>则每行行为记录转换为行为频次</li>
+<li>统计每行的 <code>ia:平均间隔</code> ~ 即行为热度<ul>
+<li>结合每行 <code>maxi:最大间隔</code></li>
+<li>以什么公式,最能相对客观的获得 <code>模式标量</code> ?</li>
+</ul>
+</li>
+<li>以 <code>模式标量</code> 的分布得出模式分类</li>
+</ul>
+<h3 id="_6">聚合</h3>
+<ul>
+<li>对每行日期间隔进行合理填充</li>
+<li>最终形成一张图片:<ul>
+<li>以自然日期为横轴像素条(高1px)</li>
+<li>是否有行为为标记(有为黑色,无为白色)</li>
+<li>逐行拼接而成</li>
+<li>可调整行次序</li>
+</ul>
+</li>
+<li>直觉的用图片形成模式的分辨<ul>
+<li>问题在如何排序能合理的体现出模式的聚类?</li>
+</ul>
+</li>
+</ul>
+<h3 id="_7">预测</h3>
+<ul>
+<li>以 Bayes 算法为基础</li>
+<li>对每行数据进行预测分析</li>
+<li>得出下一个日期区间,是否有行为的可能性数值</li>
+<li>以此为 <code>模式标量</code> , 进行分布聚合,得出模式分类</li>
+</ul>
+<h3 id="hamming-distance">Hamming Distance</h3>
+<p>~ shell909090 曰了...</p>
+<ul>
+<li>以每用户的行为标记行数据为特征序列</li>
+<li>以目标行为极限数据行为边界</li>
+<li>进行向量距离计算<ul>
+<li>将此 <code>Hamming Distance</code> 视为 <code>模式标量</code> , 进行分布聚合,得出模式分类</li>
+</ul>
+</li>
+</ul>
+<h3 id="_8">其它</h3>
+<p>....</p>
+        
+        
+        
+        
+        <hr class="clear" />
+
+
+    Author: <a href="http://zoomquiet.io">
+    <img
+      class="after"
+      src="http://zoomq.qiniudn.com/logos/zq-eyes-IMG_1987-64x64.JPG"
+      alt="Zoom.Quiet"
+      width="32"
+      height="32"
+    />
+    </a>
+      <i>
+        /<a href="mailto:i@zoomquiet.io">mail</a>
+      </i>
+    <b>
+      /<a href="mailto:https://www.gittip.com/ZoomQuiet/">
+        gittip
+        </a>
+    </b>
+    <i>
+        /<a href="https://github.com/ZoomQuiet">
+          github
+          </a>
+      </i>
+
+<br/>
+
+
+  
+
+    <div id="disqus_thread"></div>
+
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'wikizoomquietio'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+      </div> <!-- div#content -->
+      
+      
+      <div id="footer">
+        <p>
+          
+            Zoom.Quiet Personal Static Wiki |
+          
+          
+          <a href="_list.html">ls ./</a>
+          | 
+          Powered by <a href="http://markdoc.org/">Markdoc</a>
+          + <a href="https://gitcafe.com/wiki4zq/markdoc4zq">gitcafe</a>
+          + <a href="http://www.qiniu.com/about">七牛</a>
+
+        </p>
+
+      </div>
+      
+    
+    
+    
+    <hr class="clear" />
+
+
+
+  </body>
+</html>

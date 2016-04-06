@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+    "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+      xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/">
+  
+  <head>
+    
+    
+      
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+      
+      
+      <title>
+        OMooC |
+        Zoom.Quiet Personal Static Wiki 
+      </title>
+      
+      
+        <!-- YUI CSS reset, fonts, base -->
+        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.0.0/build/cssreset/reset-min.css&amp;3.0.0/build/cssfonts/fonts-min.css&amp;3.0.0/build/cssbase/base-min.css" media="screen, projection" />
+        
+        <link rel="stylesheet" type="text/css" href="../media/css/custom.css" media="screen, projection" />
+        <link rel="stylesheet" type="text/css" href="../media/css/style.css" media="screen, projection" />
+        <link rel="stylesheet" type="text/css" href="../media/css/pygments.css" media="screen, projection" />
+      
+      
+      
+      
+      
+        
+          <!-- Google Analytics -->
+          <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-2331528-6']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+              var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+              ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+            })();
+          </script>
+        
+      
+    
+  </head>
+  
+  <body >
+    
+      
+      
+    
+<div class="site-logo">
+  <img src="http://zoomq.qiniudn.com/logos/zq-eyes-IMG_1987-64x64.JPG?imageView2/2/w/32" />
+  </div>
+
+        
+          
+  
+    <ol id="breadcrumbs">
+      
+        <li class="crumb-0 not-last">
+          
+            <a href="../">index</a>
+          
+        </li>
+      
+        <li class="crumb-1 not-last">
+          
+            <a href="./">omooc</a>
+          
+        </li>
+      
+        <li class="crumb-2 last">
+          
+            OMOOC
+          
+        </li>
+      
+    </ol> <!-- ol#breadcrumbs -->
+  
+
+        
+      
+      
+      <div id="content">
+        
+        
+        
+        <h1 id="omooc">OMooC</h1>
+<p>~ 开智微课的重构</p>
+<div class="toc">
+<ul>
+<li><a href="#omooc">OMooC</a><ul>
+<li><a href="#_1">背景</a></li>
+<li><a href="#_2">现象</a></li>
+<li><a href="#_3">所以</a><ul>
+<li><a href="#_4">工作量</a></li>
+</ul>
+</li>
+<li><a href="#_5">其实</a></li>
+<li><a href="#_6">目标</a></li>
+<li><a href="#_7">细思</a><ul>
+<li><a href="#mailling-list">mailling-list</a></li>
+<li><a href="#_8">禁止事项清单</a></li>
+<li><a href="#week9d5-qa">week9d5 QA</a></li>
+</ul>
+</li>
+<li><a href="#_9">参考:</a></li>
+<li><a href="#_10">资源</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="_1">背景</h2>
+<p>某个夜里,有人提及了 Python ,于是有人提及了 大妈,
+然后就变成了集体意愿...</p>
+<p>经过 志平仁波切 的炸裂营销,变成了</p>
+<ul>
+<li>盲目相信</li>
+<li>主动报名</li>
+<li>竞争交费</li>
+<li>大妈课程</li>
+</ul>
+<h2 id="_2">现象</h2>
+<ul>
+<li>通过 <a href="http://wiki.zoomquiet.io/pythonic/MinimalistPyStart">极简 Python 上手导念</a> 的引导</li>
+<li>获得的提问却都是这样的 ~ <a href="http://wiki.zoomquiet.io/pythonic/MinimalistProgramStart">极简编程导念</a> </li>
+<li>感觉哪里有不对...</li>
+</ul>
+<h2 id="_3">所以</h2>
+<p>不过,根据当前的已知, 俺建议:</p>
+<ul>
+<li>脱离微信,回归邮件列表为主要沟通场景<ul>
+<li>和对照组拉开距离</li>
+<li>所有沟通记要,有自然的归档,永远可查阅</li>
+<li>即:学员列表先封闭,结业后开放</li>
+</ul>
+</li>
+<li>课程的具体形式,最好和现行的都不相同<ul>
+<li>无论文本/视频/直播,都无法快速形成自有版权的内容</li>
+<li>而且和当前学员习惯的课程形态相同,无法形成全新经验</li>
+</ul>
+</li>
+</ul>
+<p>综上,俺建议,课程发展形式反转:</p>
+<ul>
+<li>前两周: 教大妈安装/使用 Py<ul>
+<li>俺给出学业目标</li>
+<li>学员在规定时间里通过自学/合理提问 完成目标</li>
+<li>并总结为一篇教程</li>
+<li>大家相互传阅,评选出最好的 top3 教程</li>
+<li>交大妈自学:<ul>
+<li>进一步提出问题</li>
+<li>形成新的学业目标</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>后10周: 教大妈开发 **<ul>
+<li>通过前阶段教程编写,大家熟悉了:<ul>
+<li>git</li>
+<li>markdow</li>
+<li>团队协同</li>
+<li>邮件列表</li>
+<li>python</li>
+<li>常见资料</li>
+</ul>
+</li>
+<li>有了基础自信,自发组成 3人以下的开发团队</li>
+<li>在第一周里,讨论选择软件/服务/产品, 并形成说明书</li>
+<li>由大妈以及导师们逐一评定:<ul>
+<li>修订目标</li>
+<li>给出大致的学习路线/技术方案</li>
+</ul>
+</li>
+<li>之后8周,进行迭代开发<ul>
+<li>大妈们,在列表随时答疑</li>
+<li>学员日常开发</li>
+<li>周末定时,进行路演</li>
+<li>展示开发成果,给出技术周报,公开寻求帮助</li>
+</ul>
+</li>
+<li>最后一周为演示周:<ul>
+<li>每天一个团队的全方位展示成果</li>
+<li>全员参与评分</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>以上过程中的:<ul>
+<li>邮件</li>
+<li>问答</li>
+<li>教程</li>
+<li>周报</li>
+<li>都是最后成书的最好原材料</li>
+<li>同时,所有产品通过开源仓库形式延续下去,可由学员继续开发,或是下期学员接手</li>
+</ul>
+</li>
+</ul>
+<h3 id="_4">工作量</h3>
+<ul>
+<li>大妈以及其它导师:<ul>
+<li>每天 1~2 小时列表回答问题+整理为维基</li>
+<li>周末 3~4 小时微信/网络会议 实时指点</li>
+<li>每周 10+ 小时</li>
+</ul>
+</li>
+<li>学员:<ul>
+<li>每周3~4个技术命题</li>
+<li>每个命题用 2~3 个自然小时, 0.5~1 个 flow 小时完成</li>
+<li>另外用 1~2 个小时,进行文档化反省,以及团队交流</li>
+<li>每周 15+ 小时</li>
+</ul>
+</li>
+<li>观察员:<ul>
+<li>所有渠道的交流文字/代码变化的整理,实时分析</li>
+<li>从内部和导师们沟通,及时调整任务难度</li>
+<li>每周 10+ 小时</li>
+</ul>
+</li>
+</ul>
+<p>预期:</p>
+<ul>
+<li>导师 2~3 名</li>
+<li>学员 50</li>
+<li>观察呗 2~3 名</li>
+<li>
+<p>总人时: </p>
+<p>12<em>((2</em>11)+(50<em>15)+(2</em>10)) 
+~= 
+9504</p>
+</li>
+</ul>
+<h2 id="_5">其实</h2>
+<p>从根儿上,俺的上手课程,根本就不是教 Python 语言,而是:</p>
+<ul>
+<li>分享编程思维/视角/基础能力, 还给大家互联网时代的基本人权</li>
+<li>从学员那儿学习如何建立编程思维,从中发掘规律,向 MOOC 机构反馈</li>
+</ul>
+<p>其实,一切的基础是假设:</p>
+<ul>
+<li>python 非常容易学习,可以立即上手使用</li>
+<li>每个人其实都需要解决的个性需求,只是从来不知道可以通过自我开发软件来完成</li>
+</ul>
+<p>整个儿过程,唯一的难点是:</p>
+<ul>
+<li>大家兴冲冲组成团队后,每个团队都想开发一个巨NB 的东西出来</li>
+<li>因为没有任何软件工程经验,大家无法想法一个看起来很简单的功能需要多少工作量</li>
+<li>比如说: <code>我要开发 she 中的那种人工智能!</code></li>
+</ul>
+<p>所以,以往这种项目策划的评估,都是现场当面进行,提高效率</p>
+<ul>
+<li>现在 50 人,至少 15 个团队,以及项目的评点,</li>
+<li>俺建议,可以在立项周分散开, 每天晚上三个项目的节奏,</li>
+<li>通过网络会议进行</li>
+</ul>
+<p>然后,就可以全部通过网络进行远程支持了</p>
+<ul>
+<li>不建议使用微信的原因,在微信中的问答,<ul>
+<li>对于不在的人是不存在的,</li>
+<li>即使有机械人记录下来,也无法简单的区分不同问题的线索</li>
+</ul>
+</li>
+<li>所以,主要沟通在邮件中,通过列表自然的形成全员周知的线索集合,也避免相似问题的反复解答</li>
+</ul>
+<h2 id="_6">目标</h2>
+<p>首次 <code>开智微课</code> 学员们的最终目标是什么?!
+俺建议:</p>
+<ul>
+<li>50位学员,每人都写下自个儿的期待</li>
+<li>导师根据经验,以及课程设计,取中值</li>
+<li>厘定目标</li>
+<li>过程中,学的快的教学的慢的</li>
+</ul>
+<p>所以, OMOOC 的整体图景,大家还没有形成正确的概念,</p>
+<ul>
+<li>但是,整体目标之一: <code>形成世界上最好的 Python 入门教程</code></li>
+<li>这个教程,不是大妈写的,而是所有学员共同完成的</li>
+<li>其实,整体上类似 <a href="http://book.douban.com/subject/25965995/">构建之法 (豆瓣)</a>的教学方式</li>
+<li>只是我们的目标不是专业级的工程师;而是: <strong>获得编程思想的文科专家</strong></li>
+<li>所以,直接在 软件工程 情景中,引导大家建立各自独特的编程理解就好</li>
+<li>而不是通过严密的学科课程,让大家背一堆,专有名词,能和程序猿徦徦聊起来就好</li>
+</ul>
+<p>类似:</p>
+<p><img alt="pyicamp-flow" src="http://s5.zoomquiet.io/110226-why-pythonicamp/i/map/pyicamp-flow-all_wsd-napkin.png" /></p>
+<p>俺只坚持一个课堂准则:</p>
+<ul>
+<li>将你一路上的折腾记录下来,</li>
+<li>这是你独有的最高效的学习模式,</li>
+<li>怎么加强,得有个可复盘的记录提供给导师们</li>
+</ul>
+<p>只期望达成的 <code>MIND HACKING</code></p>
+<ul>
+<li>学员不再对编程有好莱坞式的想象</li>
+<li>能独立通过现有的互联网资源,解决主要的任何领域的问题</li>
+<li>能习惯先经过充分的思考/探索/反省后<ul>
+<li>问对问题,</li>
+<li>以对的形式,</li>
+<li>向对的人/群</li>
+</ul>
+</li>
+</ul>
+<p>参考:</p>
+<ul>
+<li><a href="http://blog.zhgdg.org/2014-10/dm34-how2ask/">珠的自白:34 如何提问?才对世界有帮助!</a></li>
+<li><a href="http://blog.zhgdg.org/2014-06/dm30-i-beg-u/">珠的自白:30 求求你,让我教你</a></li>
+</ul>
+<h2 id="_7">细思</h2>
+<p>王国维在"人间词话"中说,古今之成大事业,大学问者,必经过三重境界:</p>
+<div class="codehilite"><pre><span></span>第一境界:昨夜西风凋碧树,独上高楼,望尽天涯路
+第二境界:衣带渐宽终不悔,为伊消得人憔悴
+第三境界:众里寻他千百度,蓦然回首,那人却在灯火阑珊处
+</pre></div>
+
+
+<p>志平仁波切 也曰过:</p>
+<div class="codehilite"><pre><span></span>正确的练习方式应该是这样:
+
+    1. 只在&#39;学习区&#39;练习;
+    2. 把要训练的内容分成有针对性的小块,对每个小块进行重复练习;
+    3. 在练习的过程中,随时能获得有效的反馈;
+    4. 练习时注意力必须高度集中.
+</pre></div>
+
+
+<p>所以,针对编程练习:</p>
+<ul>
+<li>前三点,是依赖本地交互环境,和编译器实时对话,独立思考完成一系列递进式的小任务,来保证的</li>
+<li>后一点,可能更加重要<ul>
+<li>所以,微信为主的交流界面不合适</li>
+<li>因为,微信的沉浸式环境,是对交流本身,而不是交流内容</li>
+<li>随时,都有其它人更加有趣的消息涌入,根本无法保持自个儿的思考线索</li>
+<li>综上,安静的异步的礼貌的强制完备思考的 邮件列表,更加合适编程交流</li>
+<li>其实,github 之后的 pull-request 关系的代码交流模式,也是同列表的异步/完备/礼节 格调的</li>
+</ul>
+</li>
+</ul>
+<p>参考: <a href="http://www.jianshu.com/p/2621444b619d">如何正确地练习写作 - 简书</a></p>
+<h3 id="mailling-list">mailling-list</h3>
+<blockquote>
+<p>前期准备</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>1. 学员将 常用邮箱 给助教
+2. 助教将大家追加到专用列表后,大家将收到欢迎邮件
+3. 收到欢迎邮件的那一瞬间,你就正式进入了 OMMOC 首届 Pythonic上手班
+</pre></div>
+
+
+<p>邮件中有关列表,只需要说明:</p>
+<ul>
+<li>学员所有任务/讨论,都通过 omooc@googlegroups.com 邮箱和大家交流</li>
+<li>所有学员的正式技术讨论,也都必须通过 omooc@googlegroups.com 进行</li>
+<li>意思是:<ul>
+<li>发送到 omooc@googlegroups.com 的邮件,所有人都将看到</li>
+<li>任何人回复邮件到 omooc@googlegroups.com 也将所有人收到</li>
+</ul>
+</li>
+<li>推荐使用 gmail 来管理来自 omooc@googlegroups.com 的邮件<ul>
+<li>因为会很多</li>
+<li>而且,其它客户端,不保证能良好的组织各种讨论线索</li>
+</ul>
+</li>
+</ul>
+<p>即 groups 的 web 页面,根本就不应该是大家应该关心的地方!</p>
+<p>参考: <a href="http://wiki.pychina.org/hd/AbtMaillingList.html">有关邮件列表 | PyChina.org Static Wiki</a></p>
+<h3 id="_8">禁止事项清单</h3>
+<p>一些禁止事项要求要求:</p>
+<ul>
+<li>永远不用中文名来作任何命名</li>
+<li>永远不用拼音来作任何命名</li>
+<li>永远使用 UTF-8 编码</li>
+<li>永远使用 unix 分行</li>
+<li>尽可能不使用 全角标点</li>
+<li>尽可能使用 sublime text 等现代编辑器</li>
+<li>配置编辑器将 tab 替换为 4个空格</li>
+<li>...</li>
+</ul>
+<h3 id="week9d5-qa">week9d5 QA</h3>
+<ul>
+<li>Q: 什么样的人能教 py ?</li>
+<li>A: 目测是同理心强大,中文好的<ul>
+<li>同理心= 对于小白问题有耐心</li>
+<li>~~&gt; 记得当初自个儿的迷妄,能给出合理的比喻/隐喻</li>
+<li>中文好= 表达能力好,不会因为说不出来而发火?</li>
+<li>~~&gt; 接收能力也好,能从对方的反馈中,抓住关键困惑,给予合适的引导</li>
+</ul>
+</li>
+</ul>
+<h2 id="_9">参考:</h2>
+<ul>
+<li><a href="http://blog.zhgdg.org/2014-02/hd18-learn-forever/">海选文章:18 学习,学习,再学习 | GDG Livin ZhuHai Life;-)</a></li>
+<li><a href="https://gitcafe.com/PythoniCamp/PythoniCamp">PythoniCamp/PythoniCamp - GitCafe</a></li>
+<li><a href="http://www.garefu.com/Talent_view.asp?id=146">最好的学习方法,就是教别人,嘉力丰大课堂,人才中心,GAREFU嘉力丰</a></li>
+<li><a href="http://www.eduthought.net/index.php?a=news_x&amp;m=News&amp;id=1126">重新思考最好的本科教育:The Minerva Project-评论-教育思想网</a></li>
+</ul>
+<h2 id="_10">资源</h2>
+<p>根据预先规划,在试验课程结束后,应该形成可出版的图书!
+当前基调是: </p>
+<div class="codehilite"><pre><span></span>世界上最好的非专业 Py 入门自学指南
+</pre></div>
+
+
+<p>主要资源:</p>
+<ul>
+<li><a href="https://github.com/OpenMindClub/OMOOC.py/wiki">OMOOC.py 首期学员所有作业和文档</a></li>
+<li>俺私人记要: <a href="http://wiki.zoomquiet.io/omooc/">ls /omooc Zoom.Quiet Personal Static Wiki</a></li>
+<li>助教文案集(公开部分): <a href="http://openmindclub.gitbooks.io/omooc-py/content/">介紹 | OMOOC.py </a></li>
+<li>草稿仓库: <a href="https://bitbucket.org/ZoomQuiet/omooc_py_book">ZoomQuiet / omooc_py_book — Bitbucket</a></li>
+<li>以及所有远程分享的录音: <a href="http://openmindclub.qiniudn.com/res/tapes/index.html">Index of /res/tapes {gen. by gen4idx.py v13.4.18 from Zoom.Quiet} </a></li>
+</ul>
+        
+        
+        
+        
+        <hr class="clear" />
+
+
+    Author: <a href="http://zoomquiet.io">
+    <img
+      class="after"
+      src="http://zoomq.qiniudn.com/logos/zq-eyes-IMG_1987-64x64.JPG"
+      alt="Zoom.Quiet"
+      width="32"
+      height="32"
+    />
+    </a>
+      <i>
+        /<a href="mailto:i@zoomquiet.io">mail</a>
+      </i>
+    <b>
+      /<a href="mailto:https://www.gittip.com/ZoomQuiet/">
+        gittip
+        </a>
+    </b>
+    <i>
+        /<a href="https://github.com/ZoomQuiet">
+          github
+          </a>
+      </i>
+
+<br/>
+
+
+  
+
+    <div id="disqus_thread"></div>
+
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'wikizoomquietio'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+      </div> <!-- div#content -->
+      
+      
+      <div id="footer">
+        <p>
+          
+            Zoom.Quiet Personal Static Wiki |
+          
+          
+          <a href="_list.html">ls ./</a>
+          | 
+          Powered by <a href="http://markdoc.org/">Markdoc</a>
+          + <a href="https://gitcafe.com/wiki4zq/markdoc4zq">gitcafe</a>
+          + <a href="http://www.qiniu.com/about">七牛</a>
+
+        </p>
+
+      </div>
+      
+    
+    
+    
+    <hr class="clear" />
+
+
+
+  </body>
+</html>

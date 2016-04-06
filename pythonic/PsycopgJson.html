@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+    "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+      xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/">
+  
+  <head>
+    
+    
+      
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+      
+      
+      <title>
+        Psycopg2 Json |
+        Zoom.Quiet Personal Static Wiki 
+      </title>
+      
+      
+        <!-- YUI CSS reset, fonts, base -->
+        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.0.0/build/cssreset/reset-min.css&amp;3.0.0/build/cssfonts/fonts-min.css&amp;3.0.0/build/cssbase/base-min.css" media="screen, projection" />
+        
+        <link rel="stylesheet" type="text/css" href="../media/css/custom.css" media="screen, projection" />
+        <link rel="stylesheet" type="text/css" href="../media/css/style.css" media="screen, projection" />
+        <link rel="stylesheet" type="text/css" href="../media/css/pygments.css" media="screen, projection" />
+      
+      
+      
+      
+      
+        
+          <!-- Google Analytics -->
+          <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-2331528-6']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+              var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+              ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+            })();
+          </script>
+        
+      
+    
+  </head>
+  
+  <body >
+    
+      
+      
+    
+<div class="site-logo">
+  <img src="http://zoomq.qiniudn.com/logos/zq-eyes-IMG_1987-64x64.JPG?imageView2/2/w/32" />
+  </div>
+
+        
+          
+  
+    <ol id="breadcrumbs">
+      
+        <li class="crumb-0 not-last">
+          
+            <a href="../">index</a>
+          
+        </li>
+      
+        <li class="crumb-1 not-last">
+          
+            <a href="./">pythonic</a>
+          
+        </li>
+      
+        <li class="crumb-2 last">
+          
+            PsycopgJson
+          
+        </li>
+      
+    </ol> <!-- ol#breadcrumbs -->
+  
+
+        
+      
+      
+      <div id="content">
+        
+        
+        
+        <h1 id="psycopg2-json">Psycopg2 Json</h1>
+<div class="toc">
+<ul>
+<li><a href="#psycopg2-json">Psycopg2 Json</a><ul>
+<li><a href="#_1">背景</a></li>
+<li><a href="#_2">分析</a></li>
+<li><a href="#_3">折腾</a><ul>
+<li><a href="#_4">青云</a></li>
+</ul>
+</li>
+<li><a href="#psycopg2">psycopg2</a></li>
+<li><a href="#todo">TODO</a></li>
+<li><a href="#_5">参考:</a></li>
+<li><a href="#_6">是也乎</a></li>
+<li><a href="#_7">修订</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="_1">背景</h2>
+<p>团队大规模的使用 AWS 后果断无法忍受其多层次全方位多体位的计费算法!</p>
+<p>所以,对结构化非关系型文本数据,自然的要进行归并:</p>
+<ul>
+<li>原先每个用户引发的批量数据条目的写入</li>
+<li>期望有种形式, 在兼容原先的业务时,可以在 AWS 体系中变成一次IO</li>
+</ul>
+<h2 id="_2">分析</h2>
+<p>挖掘了一下 AWS 的现行数据储存服务:</p>
+<ul>
+<li>S3 贵!</li>
+<li>DynamoDB 贵!<ul>
+<li>SimpleDB 呵呵</li>
+</ul>
+</li>
+<li>EBS 针对的是数据块</li>
+<li>RDS ~ 够传统,知识储备充足<ul>
+<li>刚好支持 PostgreSQL 实例</li>
+<li>而 Pg 从9.2开始引入了json数据类型</li>
+<li>这简直就是用 RMDB 的稳定性,用 MongoDB 的自然 NoSQL 哪</li>
+</ul>
+</li>
+</ul>
+<p>参考: </p>
+<ul>
+<li><a href="https://functionwhatwhat.com/json-in-postgresql/">Why JSON in PostgreSQL is Awesome</a>  </li>
+<li><a href="http://tiborsimko.org/postgresql-mongodb-json-select-speed.html">JSON Select Speed Test with MongoDB and PostgreSQL</a></li>
+</ul>
+<h2 id="_3">折腾</h2>
+<p>问题来了, 怎么进行检验思路呢!?</p>
+<ul>
+<li>AWS 那真心是分秒毕争的刷你的卡哪!</li>
+<li>本地架 Pg 其它小伙伴是难以跨网域访问的</li>
+<li>所以,需要一个广域网上的可以快速构建/关闭的测试环境</li>
+</ul>
+<h3 id="_4">青云</h3>
+<p>刚好 青云 发布了 Pg 的支持</p>
+<ul>
+<li>文档: <a href="https://docs.qingcloud.com/guide/rdbs.html#postgresql">数据库服务指南 — QingCloud 文档</a></li>
+<li>而且工程师非常热情的送了点数</li>
+<li>立即开通</li>
+</ul>
+<blockquote>
+<p>创建 路由器
+创建 私有网络
+连接 私有网络&lt;-&gt;路由器
+创建 数据库
+绑定 私有网络
+申请 公网IP
+配置 路由器 端口转发 数据库内部网络端口</p>
+</blockquote>
+<p>BINGO!</p>
+<blockquote>
+<p>$ psql -h 公网IP -U root postgres</p>
+</blockquote>
+<p>就完成了远程接入!</p>
+<p><code>小技巧</code>:</p>
+<ul>
+<li>创建数据库时的用户口令,和 <code>root</code> 用户相同</li>
+<li>实例化时, 青云没有创建用户 database, 所以,要连接内置的 <code>postgres</code> 配置数据库</li>
+</ul>
+<p>先初始化测试表:</p>
+<div class="codehilite"><pre><span></span>zoomq=# CREATE TABLE json_test (
+      id serial primary key,
+      data jsonb
+    );
+
+zoomq=# \d json_test
+                         Table &quot;public.json_test&quot;
+ Column |  Type   |                       Modifiers
+--------+---------+--------------------------------------------------------
+ id     | integer | not null default nextval(&#39;json_test_id_seq&#39;::regclass)
+ data   | json    |
+Indexes:
+    &quot;json_test_pkey&quot; PRIMARY KEY, btree (id)
+
+zoomq=# INSERT INTO json_test (data) VALUES 
+      (&#39;{}&#39;),
+      (&#39;{&quot;a&quot;: 1}&#39;),
+      (&#39;{&quot;a&quot;: 2, &quot;b&quot;: [&quot;c&quot;, &quot;d&quot;]}&#39;),
+      (&#39;{&quot;a&quot;: 1, &quot;b&quot;: {&quot;c&quot;: &quot;d&quot;, &quot;e&quot;: true}}&#39;),
+      (&#39;{&quot;b&quot;: 2}&#39;);
+
+zoomq=# SELECT * FROM json_test;
+ id |                                data
+----+---------------------------------------------------------------------
+  1 | {}
+  2 | {&quot;a&quot;: 1}
+  3 | {&quot;a&quot;: 2, &quot;b&quot;: [&quot;c&quot;, &quot;d&quot;]}
+  4 | {&quot;a&quot;: 1, &quot;b&quot;: {&quot;c&quot;: &quot;d&quot;, &quot;e&quot;: true}}
+  5 | {&quot;b&quot;: 2}
+(5 rows)
+</pre></div>
+
+
+<p>可以看到,可以很好的支持各种情况</p>
+<h2 id="psycopg2">psycopg2</h2>
+<p>当然的,作为一头 Pythoneer 肯定先用 py 来检验规划的
+而针对 PostgreSQL, <a href="http://pythonhosted.org//psycopg2/usage.html">Psycopg 2</a>
+是绝对的首选模块.</p>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">psycopg2</span>
+<span class="kn">import</span> <span class="nn">psycopg2.extras</span>
+
+<span class="n">conn</span> <span class="o">=</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;dbname=zoomq&quot;</span><span class="p">)</span>
+<span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM json_test;&quot;</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<span class="k">print</span> <span class="n">data</span>
+
+<span class="n">_sql</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;INSERT INTO json_test (data) VALUES(&#39;</span>
+<span class="s1">        {&quot;name&quot;:&quot;张三&quot;</span>
+<span class="s1">            ,&quot;age&quot;:18</span>
+<span class="s1">            ,&quot;birthday&quot;:&quot;2013-03-03&quot;</span>
+<span class="s1">        }</span>
+<span class="s1">    &#39;);&#39;&#39;&#39;</span>
+<span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">_sql</span><span class="p">)</span>
+<span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM json_test WHERE data -&gt;&gt; &#39;age&#39; = &#39;18&#39;;&quot;</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+
+<span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<span class="k">print</span> <span class="n">data</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
+
+<span class="c1"># from psycopg2.extras.Jsonで辞書型を変換</span>
+<span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">u&quot;INSERT INTO json_test(data) VALUES (</span><span class="si">%s</span><span class="s2">)&quot;</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">psycopg2</span><span class="o">.</span><span class="n">extras</span><span class="o">.</span><span class="n">Json</span><span class="p">({</span><span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">11</span>
+        <span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;是也乎&#39;</span>
+        <span class="p">,</span> <span class="s2">&quot;birthday&quot;</span><span class="p">:</span><span class="s2">&quot;2013-11-11&quot;</span>
+        <span class="p">})</span>
+    <span class="p">])</span>
+<span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM json_test WHERE data -&gt;&gt; &#39;age&#39; = &#39;11&#39;;&quot;</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+
+<span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<span class="k">print</span> <span class="n">data</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
+
+<span class="n">cur</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="k">return</span> <span class="bp">None</span>
+</pre></div>
+
+
+<p>执行后的 <code>psql</code> 查询结果</p>
+<p><img alt="150212-test.png" src="http://zoomq.qiniudn.com/ZQCollection/snap/pg4json/150212-test.png" /></p>
+<p>可以看到 Pg 容忍了各种意外空格的 JSON 文本,
+并依然能正确的返回为 Py 的数据对象!</p>
+<h2 id="todo">TODO</h2>
+<ul>
+<li>部署到 AWS 实例中跑几批读写看计费次数是否大大减少</li>
+<li>用 sqlalchemy 包装, 就可以兼容以往的 MySQL 实例应用</li>
+</ul>
+<h2 id="_5">参考:</h2>
+<ul>
+<li>官方文档照例是非人性的:<ul>
+<li><a href="http://pythonhosted.org//psycopg2/extras.html#psycopg2.extras.Json">psycopg2.extras – Miscellaneous goodies for Psycopg 2 — Psycopg 2.5.5.dev0 documentation</a></li>
+</ul>
+</li>
+<li>日本人的严谨:<ul>
+<li><a href="http://symfoware.blog68.fc2.com/blog-entry-1258.html">PythonからPostgreSQL 9.3.2のjson列へデータの登録、検索(Psycopg2) - Symfoware</a></li>
+<li><a href="http://pythonhosted.org//psycopg2/extras.html#psycopg2.extras.Json">psycopg2.extras – Miscellaneous goodies for Psycopg 2 — Psycopg 2.5.5.dev0 documentation</a></li>
+<li><a href="http://symfoware.blog68.fc2.com/blog-entry-1259.html">PythonからPostgreSQL 9.3.2のhstore列へデータの登録、検索(Psycopg2)</a></li>
+<li><a href="http://d.hatena.ne.jp/nuko_yokohama/20141228/1419737030">PostgreSQL JSON/JSONBの文書操作とMongoDBの文書操作 - 日々の記録 別館</a></li>
+</ul>
+</li>
+<li><a href="http://schinckel.net/about/">Schinckel</a> 的神入:<ul>
+<li><a href="http://schinckel.net/2014/05/24/python%2C-postgres-and-jsonb/">Python, postgres and jsonb</a></li>
+<li><a href="http://schinckel.net/2014/05/25/querying-json-in-postgres/">Querying JSON in Postgres - Schinckel.net</a></li>
+</ul>
+</li>
+<li>以及 Pg周刊中非常应景的:<ul>
+<li><a href="http://robertbeene.com/rails-4-2-and-postgresql-9-4/?utm_source=postgresweekly&amp;utm_medium=email">Query JSON with Postgres 9.4 and Rails 4.2</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="_6">是也乎</h2>
+<p>在这一快速验证过程中,相关的体验:</p>
+<ul>
+<li>
+<p>MAC 系统中, 果断使用 <a href="http://postgresapp.com/">Postgres.app</a> 渠道安装最省心!</p>
+<ul>
+<li>
+<p>唯一注意的是要根据相关追问:</p>
+<ul>
+<li><a href="http://stackoverflow.com/questions/16407995/psycopg2-image-not-found">python - Psycopg2 image not found - Stack Overflow</a></li>
+<li><a href="http://stackoverflow.com/questions/13643452/libssl-and-libcrypto-causing-dyld-library-not-loaded-usr-lib-libpq-5-dylib">python - Libssl and libcrypto causing dyld: Library not loaded: /usr/lib/libpq.5.dylib - Stack Overflow</a></li>
+<li><a href="http://initd.org/psycopg/docs/faq.html">Frequently Asked Questions — Psycopg 2.5.5.dev0 documentation</a></li>
+</ul>
+</li>
+<li>
+<p>在 <code>~/.bash_profile</code> 中追加</p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>export DYLD_LIBRARY_PATH=/Applications/Postgres.app/Contents/Versions/9.3/lib:$DYLD_LIBRARY_PATH</p>
+</blockquote>
+<p>否则, <code>import psycopg2</code> 是要失败的...</p>
+<ul>
+<li>残念的是,上述配置后发生:<ul>
+<li><a href="http://ikarino99.hatenablog.com/entry/2014/12/11/130101">MacのGeant4でlibjpegなどの画像ライブラリまわりでdyldエラーが出るとき - 週末はいつも晴れ</a> </li>
+<li><code>subl</code> 无法从命令行打开指定文件了, 这得另外解决.</li>
+<li>有相关支招: <a href="http://stackoverflow.com/questions/16407995/psycopg2-image-not-found">python - Psycopg2 image not found - Stack Overflow</a></li>
+<li>但是,又不兼容 psycopg2 的使用</li>
+<li>好在只是测试, 可以先将就着</li>
+</ul>
+</li>
+<li>pg 的管理界面, 果断是 <a href="https://eggerapps.at/pgcommander/">PG Commander</a> 最妥贴!<ul>
+<li>但是 <code>psql</code> 其实也足够的了 ;-)</li>
+</ul>
+</li>
+<li>不过,在各种文档中追查时, 果断是 <a href="http://kapeli.com/dash">Dash</a> 最妥贴!<ul>
+<li>当然要点銭来停止保护视力的努力</li>
+<li>最后实在没忍住,买了一整年的...</li>
+</ul>
+</li>
+</ul>
+<p><code>PS:</code></p>
+<ul>
+<li>最近任性的购买服务还有: <a href="http://www.boomeranggmail.com/faq.html">Boomerang for Gmail</a><ul>
+<li><img alt="" src="http://www.boomeranggmail.com/images/Logo.png" /></li>
+<li><code>回旋镖</code> 服务!</li>
+</ul>
+</li>
+</ul>
+<h2 id="_7">修订</h2>
+<ul>
+<li>150212 随折腾随记</li>
+</ul>
+        
+        
+        
+        
+        <hr class="clear" />
+
+
+    Author: <a href="http://zoomquiet.io">
+    <img
+      class="after"
+      src="http://zoomq.qiniudn.com/logos/zq-eyes-IMG_1987-64x64.JPG"
+      alt="Zoom.Quiet"
+      width="32"
+      height="32"
+    />
+    </a>
+      <i>
+        /<a href="mailto:i@zoomquiet.io">mail</a>
+      </i>
+    <b>
+      /<a href="mailto:https://www.gittip.com/ZoomQuiet/">
+        gittip
+        </a>
+    </b>
+    <i>
+        /<a href="https://github.com/ZoomQuiet">
+          github
+          </a>
+      </i>
+
+<br/>
+
+
+  
+
+    <div id="disqus_thread"></div>
+
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'wikizoomquietio'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+      </div> <!-- div#content -->
+      
+      
+      <div id="footer">
+        <p>
+          
+            Zoom.Quiet Personal Static Wiki |
+          
+          
+          <a href="_list.html">ls ./</a>
+          | 
+          Powered by <a href="http://markdoc.org/">Markdoc</a>
+          + <a href="https://gitcafe.com/wiki4zq/markdoc4zq">gitcafe</a>
+          + <a href="http://www.qiniu.com/about">七牛</a>
+
+        </p>
+
+      </div>
+      
+    
+    
+    
+    <hr class="clear" />
+
+
+
+  </body>
+</html>

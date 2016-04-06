@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+    "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+      xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/">
+  
+  <head>
+    
+    
+      
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+      
+      
+      <title>
+        OMOOC.py week9 QA |
+        Zoom.Quiet Personal Static Wiki 
+      </title>
+      
+      
+        <!-- YUI CSS reset, fonts, base -->
+        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.0.0/build/cssreset/reset-min.css&amp;3.0.0/build/cssfonts/fonts-min.css&amp;3.0.0/build/cssbase/base-min.css" media="screen, projection" />
+        
+        <link rel="stylesheet" type="text/css" href="../media/css/custom.css" media="screen, projection" />
+        <link rel="stylesheet" type="text/css" href="../media/css/style.css" media="screen, projection" />
+        <link rel="stylesheet" type="text/css" href="../media/css/pygments.css" media="screen, projection" />
+      
+      
+      
+      
+      
+        
+          <!-- Google Analytics -->
+          <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-2331528-6']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+              var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+              ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+            })();
+          </script>
+        
+      
+    
+  </head>
+  
+  <body >
+    
+      
+      
+    
+<div class="site-logo">
+  <img src="http://zoomq.qiniudn.com/logos/zq-eyes-IMG_1987-64x64.JPG?imageView2/2/w/32" />
+  </div>
+
+        
+          
+  
+    <ol id="breadcrumbs">
+      
+        <li class="crumb-0 not-last">
+          
+            <a href="../">index</a>
+          
+        </li>
+      
+        <li class="crumb-1 not-last">
+          
+            <a href="./">omooc</a>
+          
+        </li>
+      
+        <li class="crumb-2 last">
+          
+            week9QA
+          
+        </li>
+      
+    </ol> <!-- ol#breadcrumbs -->
+  
+
+        
+      
+      
+      <div id="content">
+        
+        
+        
+        <h1 id="omoocpy-week9-qa">OMOOC.py week9 QA</h1>
+<div class="toc">
+<ul>
+<li><a href="#omoocpy-week9-qa">OMOOC.py week9 QA</a><ul>
+<li><a href="#_1">记要</a><ul>
+<li><a href="#_2">回顾上周:</a></li>
+<li><a href="#_3">加速编程运行检验的反馈过程</a></li>
+<li><a href="#_4">反馈循环:</a></li>
+<li><a href="#restful">RESTful</a></li>
+</ul>
+</li>
+<li><a href="#_5">演示反省</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<ul>
+<li>群口: 大妈+四组大腿</li>
+<li>书记: 三组大腿(少 X-files)</li>
+<li>录音: <ul>
+<li><a href="http://openmindclub.qiniudn.com/res/tapes/150522-qa-test/150522_qa_dama.MP3">150522_qa_dama.MP3</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="_1">记要</h2>
+<p>~ 提高测试反馈循环</p>
+<h3 id="_2">回顾上周:</h3>
+<p>邮件列表沉默,QA作业没有完成
+演示效果的反省没有看到
+微信渠道的演示有综合的方式,希望大家能改善 </p>
+<h3 id="_3">加速编程运行检验的反馈过程</h3>
+<ul>
+<li>上周讲怎么样快速建立MVP,建立本地MVP环境</li>
+<li>本地环境最重要的是测试,围绕核心功能,怎么样定义核心功能是可用的</li>
+<li>不仅用代码来构建运行,还要用另外一套代码来保证写出来的功能可用</li>
+<li>这套检验的代码,是为了加速编程,运行,检验过程 </li>
+<li>运行通常无问题, 但测试通常会极大影响开发效率</li>
+<li>如何定义功能可用?<ul>
+<li>如何用代码表述功能可用?</li>
+</ul>
+</li>
+<li>如何测试? 为何要有一套测试代码?<ul>
+<li>加速反馈循环: 编程-运行-反馈</li>
+<li>标准测试代码何处寻</li>
+<li>(iDoulist function 0/1 测试文档)~ 我们的尝试 ----<a href="https://github.com/Frank-the-Obscure/iDoulist/blob/master/testfile/stdio-function0.md">标准 i/o 测试集</a></li>
+<li>进行系统测试是有帮助的
+已有相关测试工具, 如果反馈时间长应考虑使用 </li>
+</ul>
+</li>
+</ul>
+<h3 id="_4">反馈循环:</h3>
+<p>~ 从修改代码到确认正确与否的时间越短越好.</p>
+<ul>
+<li>反馈超过一分钟就有问题了!</li>
+<li>微信平台的一个实例</li>
+<li>微信平台是个相对好的项目交互选择: 公众号交互模式用户已足够熟悉, 无需对用户进行教育
+为了对用户友好, 需要接受模糊输入<ul>
+<li>但是: 接受模糊输入意味着输入可能性从 1 到 n. 如何测试大量可能的模糊输入?</li>
+<li>大量测试延长了反馈循环的时间, 使同样时间能进行的测试数量大大减少</li>
+<li>如果5分钟进行一次循环, 2小时最多只能改24次</li>
+<li>如果测试只需要5秒, 反馈速度就大大加强了</li>
+</ul>
+</li>
+<li>如何加快测试?<ul>
+<li>把 用户输入-微信-后台-微信-用户输出 的循环改为本地直接模拟用户操作访问后台, 并读取后台输出, 即 本地输入-后台-本地输出</li>
+<li>原理上, 也许我们可以考虑把测试过程通过 input-process-output 在时空分开, 从而减少测试循环的组成部分<ul>
+<li>如测试处理模块时, 用标准输入文件测试即可. 而测试输出时, 完全可以从process后的几个实例开始, 而不是从输入开始测试 ---- 标准 i/o 测试集在每个操作之后的状态作为正对照(positive control)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>公众号是非常标准的RESTFUL体系,实际上只有POST关系<ul>
+<li>提交过来的xml实际上包含了用户的标准信息,然后我们的后台反应</li>
+<li>对这种情况该如何测试?<ul>
+<li>本地模拟SAE环境</li>
+<li>写一个命令行的工具脚本,模拟微信向微信后台发消息</li>
+<li>每次的测试循环控制在几秒内完成 </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="restful">RESTful</h3>
+<p>拾遗: 微信公众号是典型的 RESTful 架构</p>
+<ul>
+<li>HTTP协议应该这么用,而不是像FastCGI那么用</li>
+<li>HTTP的信息交互方式有<ul>
+<li>(1) GET </li>
+<li>(2) POST </li>
+<li>(3) PUT </li>
+<li>(4) DELETE </li>
+<li>(5) HEAD </li>
+<li>(6) OPTIONS </li>
+<li>(7) TRACE </li>
+<li>(8)CONNECT</li>
+</ul>
+</li>
+<li>当初设计不同的协议头,分适合互联网的使用</li>
+<li>
+<p>补充一个文档介绍:<a href="http://www.cnblogs.com/artech/p/restful-web-api-02.html">"我所理解的RESTful Web API"</a></p>
+<ul>
+<li><a href="http://www.ruanyifeng.com/blog/2011/09/restful.html">理解RESTful架构</a></li>
+</ul>
+</li>
+<li>
+<p>URI</p>
+<ul>
+<li>标示,而不仅是链接</li>
+<li>对资源该以什么方式操作</li>
+<li>GET一定要用幂等的方法,(GET方式被误用成甚至可被删除) </li>
+</ul>
+</li>
+<li>命令行<ul>
+<li>命令行是自然的抉择</li>
+<li>window下没有好的调试界面. 商业策略吧. linux和mac,命令终端是非常自在的渠道
+bash,zsh,都有很方便的支持,随时调出上次运行的命令. 反馈上百次模拟</li>
+<li>window是对shell拙劣的模拟,少了对行的处理</li>
+<li>换成了powershell,但与命令行有本质的不同</li>
+<li>window下,大妈putty连到linux上shell </li>
+</ul>
+</li>
+</ul>
+<h2 id="_5">演示反省</h2>
+<ul>
+<li><a href="https://github.com/csufuyi/niubility/wiki/week3-Presentation">Niubility演示总结</a><ul>
+<li>问题记录<ul>
+<li>大牛列表选择大牛,这个还未实现</li>
+<li>关键词查询:模糊的对,不靠谱</li>
+<li>用户提示:应该有,大牛,dn,兼容的命令组</li>
+<li>使用兼容微信的环境</li>
+</ul>
+</li>
+<li>总结    <ul>
+<li>之前为了赶功能,没有做交互优化,完善微信操作的优化</li>
+<li>安排好时间,做H5展示大牛的页面</li>
+<li>缩短测试的反馈时间. 命令行脚本执行测试</li>
+<li>尝试用语音识别接口处理语音消息</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Bookgiver<ul>
+<li>当前进展<ul>
+<li>使用 SAE 平台 和 本地测试环境</li>
+<li>开启 微信开发模式</li>
+<li>curl + tmux 进行调试</li>
+<li>在公众号发消息hi回复欢迎!</li>
+</ul>
+</li>
+<li>本周演示存在的问题:<ul>
+<li>测试过程过于复杂</li>
+</ul>
+</li>
+<li>改进策略<ul>
+<li>自动化测试,加快运行到演练的过程</li>
+<li>继续学习大妈的 "42分钟乱入 wechat 手册!-)"教程</li>
+<li>使用 KVDB 完成简单的功能</li>
+<li>taker 提交借书请求</li>
+<li>giver 发送消息a,查看所有请求,并根据自身意愿联系 taker</li>
+<li>做出项目的流程图</li>
+</ul>
+</li>
+<li>教程:<ul>
+<li>需要增补的地方比较多,因为基本上还没有开始写. . . </li>
+<li>初期搭建比较困难,主要精力放在了那边,没有顾及上教程</li>
+<li>这周开始写的话,会先从这周解决的问题开始入手,比如自动化测试,具体会和队友在操作中确定</li>
+</ul>
+</li>
+<li><a href="http://chaonet.gitbooks.io/pythoncamp0/content/Chapter-2/%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E6%B5%8B%E8%AF%95%E5%91%BD%E4%BB%A4%E8%87%AA%E5%8A%A8%E7%BC%96%E8%BE%91&amp;%E6%89%A7%E8%A1%8C.html">gitbook链接</a> 规划教程目录:<ul>
+<li>平台和工具的选择</li>
+<li>微信与SAE对接</li>
+<li>tmux+curl+本地调测</li>
+<li>公众号自动应答</li>
+<li>本地环境测试命令自动编辑&amp;执行</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+        
+        
+        
+        
+        <hr class="clear" />
+
+
+    Author: <a href="http://zoomquiet.io">
+    <img
+      class="after"
+      src="http://zoomq.qiniudn.com/logos/zq-eyes-IMG_1987-64x64.JPG"
+      alt="Zoom.Quiet"
+      width="32"
+      height="32"
+    />
+    </a>
+      <i>
+        /<a href="mailto:i@zoomquiet.io">mail</a>
+      </i>
+    <b>
+      /<a href="mailto:https://www.gittip.com/ZoomQuiet/">
+        gittip
+        </a>
+    </b>
+    <i>
+        /<a href="https://github.com/ZoomQuiet">
+          github
+          </a>
+      </i>
+
+<br/>
+
+
+  
+
+    <div id="disqus_thread"></div>
+
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'wikizoomquietio'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+      </div> <!-- div#content -->
+      
+      
+      <div id="footer">
+        <p>
+          
+            Zoom.Quiet Personal Static Wiki |
+          
+          
+          <a href="_list.html">ls ./</a>
+          | 
+          Powered by <a href="http://markdoc.org/">Markdoc</a>
+          + <a href="https://gitcafe.com/wiki4zq/markdoc4zq">gitcafe</a>
+          + <a href="http://www.qiniu.com/about">七牛</a>
+
+        </p>
+
+      </div>
+      
+    
+    
+    
+    <hr class="clear" />
+
+
+
+  </body>
+</html>

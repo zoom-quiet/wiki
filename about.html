@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+    "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+      xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/">
+  
+  <head>
+    
+    
+      
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+      
+      
+      <title>
+        About Markdoc |
+        Zoom.Quiet Personal Static Wiki 
+      </title>
+      
+      
+        <!-- YUI CSS reset, fonts, base -->
+        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.0.0/build/cssreset/reset-min.css&amp;3.0.0/build/cssfonts/fonts-min.css&amp;3.0.0/build/cssbase/base-min.css" media="screen, projection" />
+        
+        <link rel="stylesheet" type="text/css" href="media/css/custom.css" media="screen, projection" />
+        <link rel="stylesheet" type="text/css" href="media/css/style.css" media="screen, projection" />
+        <link rel="stylesheet" type="text/css" href="media/css/pygments.css" media="screen, projection" />
+      
+      
+      
+      
+      
+        
+          <!-- Google Analytics -->
+          <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-2331528-6']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+              var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+              ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+            })();
+          </script>
+        
+      
+    
+  </head>
+  
+  <body >
+    
+      
+      
+    
+<div class="site-logo">
+  <img src="http://zoomq.qiniudn.com/logos/zq-eyes-IMG_1987-64x64.JPG?imageView2/2/w/32" />
+  </div>
+
+        
+          
+  
+    <ol id="breadcrumbs">
+      
+        <li class="crumb-0 not-last">
+          
+            <a href="./">index</a>
+          
+        </li>
+      
+        <li class="crumb-1 last">
+          
+            about
+          
+        </li>
+      
+    </ol> <!-- ol#breadcrumbs -->
+  
+
+        
+      
+      
+      <div id="content">
+        
+        
+        
+        <h1 id="about-markdoc">About Markdoc</h1>
+<p>Markdoc is a project which aims to provide a lightweight alternative to large
+database-powered wiki systems. I’ve listed the main goals of the project below;
+I believe that, in its current state, it meets all of these.</p>
+<h2 id="goals-philosophy">Goals &amp; Philosophy</h2>
+<h3 id="wikis">Wikis</h3>
+<ul>
+<li>
+<p>Wikis should be made up of plain-text files, without requiring a running
+    instance of MySQL or even an SQLite database.</p>
+</li>
+<li>
+<p>There should only be one simple-to-write plain-text configuration file.</p>
+</li>
+<li>
+<p>Wikis should be VCS-friendly, yet VCS-agnostic.</p>
+</li>
+<li>
+<p>It should be possible to compile a wiki to static HTML, and then to serve
+    this HTML with no wiki-specific software.</p>
+</li>
+</ul>
+<h3 id="markdown">Markdown</h3>
+<p>I chose Markdown as the format for this wiki system because of its simplicity,
+familiarity for many writers, and the extensibility of its Python
+implementation. For example, Pygments syntax highlighting is available through a
+single configuration option in the <code>markdoc.yaml</code> file. The ability to embed raw
+HTML in Markdown documents gives it power and flexibility.</p>
+<h3 id="command-line-interface">Command-Line Interface</h3>
+<ul>
+<li>
+<p>The CLI should be intuitive and easy to use.</p>
+</li>
+<li>
+<p>There should only be a few different sub-commands, each of which does what
+    one would expect it to.</p>
+</li>
+<li>
+<p>There should be a full web server included, in the case that setting up a
+    large-scale HTTP server is impractical or impossible.</p>
+</li>
+<li>
+<p>The CLI should be pure-Python, for portability and extensibility.</p>
+</li>
+</ul>
+<h2 id="license">License</h2>
+<p>Markdoc is <a href="http://unlicense.org/">public domain software</a>.</p>
+<blockquote>
+<p>This is free and unencumbered software released into the public domain.</p>
+<p>Anyone is free to copy, modify, publish, use, compile, sell, or distribute
+this software, either in source code form or as a compiled binary, for any
+purpose, commercial or non-commercial, and by any means.</p>
+<p>In jurisdictions that recognize copyright laws, the author or authors of this
+software dedicate any and all copyright interest in the software to the public
+domain. We make this dedication for the benefit of the public at large and to
+the detriment of our heirs and successors. We intend this dedication to be an
+overt act of relinquishment in perpetuity of all present and future rights to
+this software under copyright law.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+<p>For more information, please refer to <a href="http://unlicense.org/">http://unlicense.org/</a></p>
+</blockquote>
+<p>The bundled Pygments style (it’s the <a href="http://github.com/">Github</a> syntax highlighting theme) was
+created by <a href="http://tom.preston-werner.com/">Tom Preston-Werner</a>; it was sourced from <a href="http://github.com/mojombo/tpw/">his blog</a> and is
+licensed under the MIT License:</p>
+<blockquote>
+<p>Copyright © 2010 Tom Preston-Werner</p>
+<p>Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without
+restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:</p>
+<p>The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.</p>
+</blockquote>
+        
+        
+        
+        
+        <hr class="clear" />
+
+
+    Author: <a href="http://zoomquiet.io">
+    <img
+      class="after"
+      src="http://zoomq.qiniudn.com/logos/zq-eyes-IMG_1987-64x64.JPG"
+      alt="Zoom.Quiet"
+      width="32"
+      height="32"
+    />
+    </a>
+      <i>
+        /<a href="mailto:i@zoomquiet.io">mail</a>
+      </i>
+    <b>
+      /<a href="mailto:https://www.gittip.com/ZoomQuiet/">
+        gittip
+        </a>
+    </b>
+    <i>
+        /<a href="https://github.com/ZoomQuiet">
+          github
+          </a>
+      </i>
+
+<br/>
+
+
+  
+
+    <div id="disqus_thread"></div>
+
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'wikizoomquietio'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+      </div> <!-- div#content -->
+      
+      
+      <div id="footer">
+        <p>
+          
+            Zoom.Quiet Personal Static Wiki |
+          
+          
+          <a href="_list.html">ls ./</a>
+          | 
+          Powered by <a href="http://markdoc.org/">Markdoc</a>
+          + <a href="https://gitcafe.com/wiki4zq/markdoc4zq">gitcafe</a>
+          + <a href="http://www.qiniu.com/about">七牛</a>
+
+        </p>
+
+      </div>
+      
+    
+    
+    
+    <hr class="clear" />
+
+
+
+  </body>
+</html>

@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+    "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+      xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/">
+  
+  <head>
+    
+    
+      
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+      
+      
+      <title>
+        OMOOC.py week3 QA 代码累积 |
+        Zoom.Quiet Personal Static Wiki 
+      </title>
+      
+      
+        <!-- YUI CSS reset, fonts, base -->
+        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.0.0/build/cssreset/reset-min.css&amp;3.0.0/build/cssfonts/fonts-min.css&amp;3.0.0/build/cssbase/base-min.css" media="screen, projection" />
+        
+        <link rel="stylesheet" type="text/css" href="../media/css/custom.css" media="screen, projection" />
+        <link rel="stylesheet" type="text/css" href="../media/css/style.css" media="screen, projection" />
+        <link rel="stylesheet" type="text/css" href="../media/css/pygments.css" media="screen, projection" />
+      
+      
+      
+      
+      
+        
+          <!-- Google Analytics -->
+          <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-2331528-6']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+              var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+              ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+            })();
+          </script>
+        
+      
+    
+  </head>
+  
+  <body >
+    
+      
+      
+    
+<div class="site-logo">
+  <img src="http://zoomq.qiniudn.com/logos/zq-eyes-IMG_1987-64x64.JPG?imageView2/2/w/32" />
+  </div>
+
+        
+          
+  
+    <ol id="breadcrumbs">
+      
+        <li class="crumb-0 not-last">
+          
+            <a href="../">index</a>
+          
+        </li>
+      
+        <li class="crumb-1 not-last">
+          
+            <a href="./">omooc</a>
+          
+        </li>
+      
+        <li class="crumb-2 last">
+          
+            week3QA
+          
+        </li>
+      
+    </ol> <!-- ol#breadcrumbs -->
+  
+
+        
+      
+      
+      <div id="content">
+        
+        
+        
+        <h1 id="omoocpy-week3-qa">OMOOC.py week3 QA 代码累积</h1>
+<div class="toc">
+<ul>
+<li><a href="#omoocpy-week3-qa">OMOOC.py week3 QA 代码累积</a><ul>
+<li><a href="#_1">暖场</a></li>
+<li><a href="#_2">工具与仓库管理,软件工程</a></li>
+<li><a href="#_3">手艺活儿</a><ul>
+<li><a href="#code-style">code style与代码行数</a></li>
+</ul>
+</li>
+<li><a href="#_4">关键列表</a></li>
+<li><a href="#_5">课程预警</a></li>
+<li><a href="#_6">福利</a></li>
+<li><a href="#qa">现场QA</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<ul>
+<li>单口: 大妈</li>
+<li>书记: 路遥<ul>
+<li><a href="https://raw.githubusercontent.com/Lillianmin/pythoncamp0/master/source/DMQA/week3QA.md">Lillianmin</a></li>
+</ul>
+</li>
+<li>录音:<ul>
+<li><a href="http://openmindclub.qiniudn.com/res/tapes/150405-dama-qa/150405_dama1_review.MP3">150405_dama1_review.MP3</a></li>
+<li><a href="http://openmindclub.qiniudn.com/res/tapes/150405-dama-qa/150405_dama2_qa.MP3">150405_dama2_qa.MP3</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="_1">暖场</h2>
+<p>尹相飞+安静 上期录音文字化</p>
+<ul>
+<li>加分!</li>
+<li>但是,重听的有几个?</li>
+<li>怎样统计录音收听人数?强烈建议重听录音. </li>
+<li>论录音的有效性<ul>
+<li>语音转文本,隐式任务变成显式任务. </li>
+<li>李笑来老师:人人都能学好英语. 4本gitbook电子书. </li>
+<li>李笑来老师的语言技巧:朗读. 50次,比看任何书或者任何题都高效. </li>
+<li>语音的记录方式. </li>
+<li>录音有非常好的作用,跟时间管理的蕃茄钟类似,review. 听录音,找到自己的节奏. </li>
+<li>录音可还原实时情景. </li>
+<li>读自己的教程,看看是否能感动自己. </li>
+</ul>
+</li>
+</ul>
+<p>又</p>
+<ul>
+<li>作业编号,163 课件有编号模式也没有人发现?</li>
+<li>为什么选择8:20也是一个梗</li>
+</ul>
+<h2 id="_2">工具与仓库管理,软件工程</h2>
+<h2 id="_3">手艺活儿</h2>
+<p>最多迭代版本的学员有几个?
+迭代最大代码块几行?</p>
+<p>经验?!</p>
+<ul>
+<li>手绘</li>
+<li>实验: 60帧/s ...?!</li>
+<li>
+<p>代码行数!?</p>
+<ul>
+<li>层次!</li>
+</ul>
+</li>
+<li>
+<p>上周惊喜. 迭代次数. </p>
+</li>
+<li>岩钉的形式:codeskulptor不是代码管理工具. 本地实验与迭代. </li>
+<li>社交网络. 小马在挑选前期员工时,搞编程比赛,坚持到最后的人,思维最敏捷,最能喝酒. </li>
+<li>用工具来验证结果. 例子:短距,独立影片,一个移动apps,生命周期. 一半是现实生活中,两个创始人,投资人生活. 另一半是屏幕,电脑完成工作的真实过程. 工具在代码生长的过程中,以什么方式出现和使用. </li>
+<li>42分钟乱入. 工具组合. <ul>
+<li><a href="http://chaos2.zoomquiet.io/">chaos2* O.B.P index {by gen4dot2htm.py v11.10.27 at:140403 17:47:43,816612}</a></li>
+</ul>
+</li>
+<li>代码迭代比实际效果更珍惜的过程. 有意义版本push至github中,有全球唯一链接,传播,标识的岩钉. codeskulptor的链接无法保证,只有运行才能感觉到代码的变化,而github中diff在任何时候都可以看到版本之间代码的区别. </li>
+<li>版本管理,版本仓库,版本仓库中应该放什么. 一个放代码,一个放gitbook图书的仓库. 涉及到软件工程,构件之法?</li>
+<li>编程思想,跟程序员没关系,从事任何行业,只要有需要用到电脑产生数据的时候,个人知识资产的仓库,这个仓库应该放什么,应该怎么放,怎么取名,怎么管理,怎么发布,怎么合并. 大家都在用,但是大家都是以及其原始的方式在管理,大脑会烦. 凡是你觉得烦,说明你做的是非创造性的工作,而且会产生各种激素,让自己觉得难受,笨. 大脑天生愿意做复杂的事情. 代码的刺激和兴奋感,是大脑很容易上瘾的事情. </li>
+<li>软件工程当中,经典的管理,工程优化工具. 手绘程序,数据,逻辑图谱;非功能性的测试代码;codeskulptor绘制每60帧/s;</li>
+</ul>
+<h3 id="code-style">code style与代码行数</h3>
+<ul>
+<li>
+<p>导师花了两个多小时完成画笔. 本地迭代十多次</p>
+<ul>
+<li>社交网络的感受:编程比赛. 用工具验证想法. 例子:一个移动App的生命周期录像,一边是录像,一边是电脑屏幕. 怎样应用工具,记得看大妈的快速教程~</li>
+<li>记录开发过程 --- 版本管理. 及时push github记录. </li>
+<li>版本仓库:放什么,怎么放,如何命名,迁移,升级,如何fork. </li>
+<li>仓库一个放代码,一个放结果. </li>
+<li>关键问题:知识的组织和管理. </li>
+<li>机械重复,非创新性工作会让人难受. </li>
+</ul>
+</li>
+<li>
+<p>代码行从最初几行变成200行</p>
+<ul>
+<li><a href="http://www.codeceo.com/article/from-3000-to-15-rows-code.html">从把三千行代码重构成15行代码谈起</a></li>
+<li><a href="http://www.informationisbeautiful.net/visualizations/million-lines-of-code/">Million Lines of Code | Information Is Beautiful</a><ul>
+<li>1亿行代码 车载系统</li>
+<li>3.3兆行 人类DNA</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>代码行数,与软件质量关系. </li>
+<li>大家写的python脚本行数,写的越多,越来越发觉,我们想干的一件事情,不是一口气把一件事情全部实现. 而是用一小块的函数来分功能实现. 用github把版本记录下来,实际上我们修订,修改的功能固化下来的行数大致在多少行. </li>
+<li>编程规范: 函数的起名值得深入学习. <ul>
+<li>code style. 每行字符不超过80个. </li>
+<li>每一个函数最大包含代码行不应该超过50行,一屏半左右的高度. </li>
+<li>函数写太长,容易有反作用. </li>
+<li>随着我们要完成的功能越来越多的时候,习惯把每一功能拆成相互可以帮忙的小功能,即元功能. </li>
+<li>是我们每一次应该关注的功能模块. </li>
+</ul>
+</li>
+<li>什么是该干的,什么是不该干的. 函数的取名与代表意义的匹配,是你一生,不管编不编程都会碰到的问题. </li>
+<li>现在大家在200行左右的情景完成一个唯一的任务. <ul>
+<li>如果你能够独立写一万行以内的可以运行的程序. 初学都. </li>
+<li>1W-10W行,合格工程师. </li>
+<li>10-100W,专家. </li>
+</ul>
+</li>
+<li>人类所写的代码量. F35 1000W级,chrome500W行,猎豹浏览器500W行级,波音500W<ul>
+<li>最高的级别是民用小汽车搭载的代码量是1亿行. </li>
+<li>美国退休金管理与发工资系统,1亿行. </li>
+</ul>
+</li>
+<li>从200行至500W需要跨越的. 管理200行与1亿行的编程思想是一样的. </li>
+<li>人类DNA有3.3兆行代码. </li>
+<li>代码是手艺活!</li>
+</ul>
+<h2 id="_4">关键列表</h2>
+<p>~ <code>继续安利邮件列表</code></p>
+<p>工具: 4/1 11 年了!</p>
+<ul>
+<li>安利邮件列表. 放作业比较多,问问题比较少. 绝大多数同学邮件管理客户端不是gmail. 1984年,文件事件,苹果发布广告片,与众不同. 04年最大的免费中文邮箱只有50M,平均只有10-15M. 04年,google gmail系统发布每人1G空间, 而且会不断增长, never deleting, just arching . 不用删除,只要归件. 私人邮件和公司邮件超过3W以后,才慢慢往gmail上归. 已经存了42G的邮件,超过41万封. 所以大家如果工具用错,会找不到北,发邮件,管理邮件,找邮件会非常痛苦. </li>
+<li>gmail邮件快捷键. 每天管理非常多的邮件,大脑会厌烦. 普通的邮件管理客户端需要用鼠标点中,然后再进行下一步的键盘处理,即最快最快,至少手要在鼠标与键盘之间来回操作两次,六至八次操作. 即使你非常熟练,每封5秒. 每天正常收到的邮件300封,有时候会到500,每天处理邮件只会越来越多. gmail 一次快捷键可以操作100封邮件. 鼠标操作,必须把注意力放到该死的鼠标上,是对注意力极大的浪费. 这也是为什么阳老师极力推荐markdown的原因. 鼠标并没有提高工作效率,反而降低了. </li>
+<li>gmail Lab快捷键. 键盘是固定死的. 快捷键是固定死的. 快捷键所处理的事项是固定死的. </li>
+<li>人的大脑,并发是假的. 由于工作场景的切换是需要时间的,可能需要20分钟,才能找回工作状态. 另一种工作方式,需要一瞬间把需要的进程提取出来 ,即灵感. 需要在心灵状态之下才能完成跨进程的灵感提取. </li>
+<li>电脑快捷键,换操作系统不起作用时会很沮丧. </li>
+<li>选择对的工具,不仅是提高工作效率的问题,而且是解放你的思想. 大脑在某一个具体的时刻,能够关注的内容,能够加载到内存当中的数据是有问题的. 大家能够在有限的内存中,加载更多的数据. 压缩. </li>
+<li>
+<p>输入信息,点击鼠标等毫无意义的事情,浪费. 当你没有坚持形成过类似的体验的时候,你完全不相信这种东西的存在. </p>
+</li>
+<li>
+<p>Gmail,只归档,不删除. </p>
+</li>
+<li>本地超过3w封邮件,本地系统就很慢了. 大妈已有42G邮件,41万封,日处理量300~500封邮件. </li>
+<li>如何达成该目标?<ul>
+<li>组合键是神器. 鼠标处理是对注意力的极大浪费. </li>
+<li>切换工作任务需要耗费时间. 心流触发灵感. </li>
+<li>自动化完成机械任务,从而解放思考. 要么压缩信息,要么过滤信息. </li>
+</ul>
+</li>
+</ul>
+<h2 id="_5">课程预警</h2>
+<ul>
+<li>课程证书. 而我们是要求压缩任务. <ul>
+<li>10个小任务. 助教将详细的任务分解至163上. </li>
+</ul>
+</li>
+<li>下周任务已经发布,具体是什么自己看一下,若看不懂及时在邮件列表中提问. </li>
+<li>大家三周,教了半年前的自己多少东西. 可以教的很多很多,甚至于是你过程人生经验中的爆发. 挖掘,叙述你的知识,思维模式,很有可能你会忘记,也就意味着你无法教会半年前的你. 意味着你实际上掌握的不是正确的东西. 只要你试图教会别人,你会发现这么简单的东西,你会说不清楚. 实际上,说不清楚说明你还没有真的懂. 大妈就是告诉你你有没有真的明白. <ul>
+<li>说不清楚其实是没有掌握. </li>
+<li>认真写出自己最有价值的事情. </li>
+</ul>
+</li>
+</ul>
+<h2 id="_6">福利</h2>
+<p>九井谅子</p>
+<p><img alt="" src="http://i2.w.yun.hjfile.cn/slide/201312/rium1490351875.jpg" /></p>
+<p>抽屉里的温室箱</p>
+<p>开脑洞有帮助 ;-)</p>
+<p>创新模式,无稳定画风.</p>
+<h2 id="qa">现场QA</h2>
+<ul>
+<li>笨方法学python 跟这个课程的思路有什么不同呀?<ul>
+<li>180度的不同,笨办法的思路还是比较传统的意向灌输,但把以往正规思维当中,天花乱坠的什么思维啊历史啊什么的扒光了. 根据经验将日常我们解决python问题的基础概念讲清楚. 2/8原则,笨办法实际上是通过5%至10%的内容,可以COVER80%的情况. 先接触知识,然后按照各自情况干活. 这个课程教学反转. 书与本课程完全不冲突,但内容是干货最多的,是效率最高的,在最短时间内,掌握最多最有效python知识点的一个教程形式. 如果没有掌握知识点,快速刷一遍笨办法学python是完全有效的. 问题是知识点如何应用到周围应证过程,怎么写出半年前自己可以看得懂的,因为那是全新的,只有你自己的模式才能产生的新知识. 内容上不冲突,输出上,笨办法并没有要求有这样的输出. 如果抄笨办法是可以看得出来的,抄过来的是毫无意义的. </li>
+</ul>
+</li>
+<li>笨办法学Python是一本好教材. 但和教学翻转的目的和效果不一样. 可以快速过一遍掌握关键的20%Python知识. </li>
+</ul>
+        
+        
+        
+        
+        <hr class="clear" />
+
+
+    Author: <a href="http://zoomquiet.io">
+    <img
+      class="after"
+      src="http://zoomq.qiniudn.com/logos/zq-eyes-IMG_1987-64x64.JPG"
+      alt="Zoom.Quiet"
+      width="32"
+      height="32"
+    />
+    </a>
+      <i>
+        /<a href="mailto:i@zoomquiet.io">mail</a>
+      </i>
+    <b>
+      /<a href="mailto:https://www.gittip.com/ZoomQuiet/">
+        gittip
+        </a>
+    </b>
+    <i>
+        /<a href="https://github.com/ZoomQuiet">
+          github
+          </a>
+      </i>
+
+<br/>
+
+
+  
+
+    <div id="disqus_thread"></div>
+
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'wikizoomquietio'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+      </div> <!-- div#content -->
+      
+      
+      <div id="footer">
+        <p>
+          
+            Zoom.Quiet Personal Static Wiki |
+          
+          
+          <a href="_list.html">ls ./</a>
+          | 
+          Powered by <a href="http://markdoc.org/">Markdoc</a>
+          + <a href="https://gitcafe.com/wiki4zq/markdoc4zq">gitcafe</a>
+          + <a href="http://www.qiniu.com/about">七牛</a>
+
+        </p>
+
+      </div>
+      
+    
+    
+    
+    <hr class="clear" />
+
+
+
+  </body>
+</html>

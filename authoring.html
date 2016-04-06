@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+    "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+      xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/">
+  
+  <head>
+    
+    
+      
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+      
+      
+      <title>
+        Authoring |
+        Zoom.Quiet Personal Static Wiki 
+      </title>
+      
+      
+        <!-- YUI CSS reset, fonts, base -->
+        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.0.0/build/cssreset/reset-min.css&amp;3.0.0/build/cssfonts/fonts-min.css&amp;3.0.0/build/cssbase/base-min.css" media="screen, projection" />
+        
+        <link rel="stylesheet" type="text/css" href="media/css/custom.css" media="screen, projection" />
+        <link rel="stylesheet" type="text/css" href="media/css/style.css" media="screen, projection" />
+        <link rel="stylesheet" type="text/css" href="media/css/pygments.css" media="screen, projection" />
+      
+      
+      
+      
+      
+        
+          <!-- Google Analytics -->
+          <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-2331528-6']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+              var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+              ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+            })();
+          </script>
+        
+      
+    
+  </head>
+  
+  <body >
+    
+      
+      
+    
+<div class="site-logo">
+  <img src="http://zoomq.qiniudn.com/logos/zq-eyes-IMG_1987-64x64.JPG?imageView2/2/w/32" />
+  </div>
+
+        
+          
+  
+    <ol id="breadcrumbs">
+      
+        <li class="crumb-0 not-last">
+          
+            <a href="./">index</a>
+          
+        </li>
+      
+        <li class="crumb-1 last">
+          
+            authoring
+          
+        </li>
+      
+    </ol> <!-- ol#breadcrumbs -->
+  
+
+        
+      
+      
+      <div id="content">
+        
+        
+        
+        <h1 id="authoring">Authoring</h1>
+<p>A wiki would be nothing without pages. In Markdoc, pages are written in
+<a href="http://daringfireball.net/projects/markdown/">Markdown</a>, a plain-text formatting syntax designed by
+<a href="http://daringfireball.net/">John Gruber</a>. In his own words:</p>
+<blockquote>
+<p>Markdown allows you to write using an easy-to-read, easy-to-write plain text 
+format, then convert it to structurally valid XHTML (or HTML).</p>
+<p>[...]</p>
+<p>The overriding design goal for Markdown’s formatting syntax is to
+make it as readable as possible. The idea is that a Markdown-formatted
+document should be publishable as-is, as plain text, without looking
+like it’s been marked up with tags or formatting instructions.</p>
+</blockquote>
+<p>For a comprehensive guide to the Markdown syntax, consult the
+<a href="ref/markup">markup reference documentation</a>. The rest of this document will
+cover the Markdoc-specific conventions and constraints related to writing wiki
+pages.</p>
+<h2 id="linking">Linking</h2>
+<p>Every page in your wiki will likely link to several other pages. Markdoc does
+not require any special syntax for internal links; the usual Markdown format
+will work. An example of a link from this very page follows:</p>
+<div class="codehilite"><pre><span></span>For a comprehensive guide to the Markdown syntax,
+consult the [markup reference documentation](/ref/markup).
+</pre></div>
+
+
+<p>As you can see, the link href is an absolute path to the document, without any
+extension. Markdoc will process this and convert it into a relative path when
+rendering the corresponding HTML. This means that you can host Markdoc wikis
+under sub-directories on a web server, and the links will still work properly.</p>
+<p>If you split your wiki up into sub-directories (for example, in this wiki, there
+is an <code>internals/</code> directory), the pattern remains the same. A link to the
+<a href="internals/rendering">internals/rendering</a> document looks like this:</p>
+<div class="codehilite"><pre><span></span>A link to the [internals/rendering](/internals/rendering) document.
+</pre></div>
+
+
+<p>Note that links will only be made relative if they begin with a <code>/</code> character;
+for example, a link to <code>http://www.google.com/</code> will be left untouched.</p>
+        
+        
+        
+        
+        <hr class="clear" />
+
+
+    Author: <a href="http://zoomquiet.io">
+    <img
+      class="after"
+      src="http://zoomq.qiniudn.com/logos/zq-eyes-IMG_1987-64x64.JPG"
+      alt="Zoom.Quiet"
+      width="32"
+      height="32"
+    />
+    </a>
+      <i>
+        /<a href="mailto:i@zoomquiet.io">mail</a>
+      </i>
+    <b>
+      /<a href="mailto:https://www.gittip.com/ZoomQuiet/">
+        gittip
+        </a>
+    </b>
+    <i>
+        /<a href="https://github.com/ZoomQuiet">
+          github
+          </a>
+      </i>
+
+<br/>
+
+
+  
+
+    <div id="disqus_thread"></div>
+
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'wikizoomquietio'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+      </div> <!-- div#content -->
+      
+      
+      <div id="footer">
+        <p>
+          
+            Zoom.Quiet Personal Static Wiki |
+          
+          
+          <a href="_list.html">ls ./</a>
+          | 
+          Powered by <a href="http://markdoc.org/">Markdoc</a>
+          + <a href="https://gitcafe.com/wiki4zq/markdoc4zq">gitcafe</a>
+          + <a href="http://www.qiniu.com/about">七牛</a>
+
+        </p>
+
+      </div>
+      
+    
+    
+    
+    <hr class="clear" />
+
+
+
+  </body>
+</html>

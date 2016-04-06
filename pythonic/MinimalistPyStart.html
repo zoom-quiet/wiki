@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+    "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+      xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/">
+  
+  <head>
+    
+    
+      
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+      
+      
+      <title>
+        极简 Python 上手导念 |
+        Zoom.Quiet Personal Static Wiki 
+      </title>
+      
+      
+        <!-- YUI CSS reset, fonts, base -->
+        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.0.0/build/cssreset/reset-min.css&amp;3.0.0/build/cssfonts/fonts-min.css&amp;3.0.0/build/cssbase/base-min.css" media="screen, projection" />
+        
+        <link rel="stylesheet" type="text/css" href="../media/css/custom.css" media="screen, projection" />
+        <link rel="stylesheet" type="text/css" href="../media/css/style.css" media="screen, projection" />
+        <link rel="stylesheet" type="text/css" href="../media/css/pygments.css" media="screen, projection" />
+      
+      
+      
+      
+      
+        
+          <!-- Google Analytics -->
+          <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-2331528-6']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+              var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+              ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+            })();
+          </script>
+        
+      
+    
+  </head>
+  
+  <body >
+    
+      
+      
+    
+<div class="site-logo">
+  <img src="http://zoomq.qiniudn.com/logos/zq-eyes-IMG_1987-64x64.JPG?imageView2/2/w/32" />
+  </div>
+
+        
+          
+  
+    <ol id="breadcrumbs">
+      
+        <li class="crumb-0 not-last">
+          
+            <a href="../">index</a>
+          
+        </li>
+      
+        <li class="crumb-1 not-last">
+          
+            <a href="./">pythonic</a>
+          
+        </li>
+      
+        <li class="crumb-2 last">
+          
+            MinimalistPyStart
+          
+        </li>
+      
+    </ol> <!-- ol#breadcrumbs -->
+  
+
+        
+      
+      
+      <div id="content">
+        
+        
+        
+        <h1 id="python">极简 Python 上手导念</h1>
+<div class="toc">
+<ul>
+<li><a href="#python">极简 Python 上手导念</a><ul>
+<li><a href="#_1">概述</a></li>
+<li><a href="#_2">准入</a><ul>
+<li><a href="#_3">福利:给文科森</a></li>
+</ul>
+</li>
+<li><a href="#_4">环境</a></li>
+<li><a href="#_5">然后</a><ul>
+<li><a href="#_6">开始</a></li>
+</ul>
+</li>
+<li><a href="#_7">没有然后了</a></li>
+<li><a href="#_8">知乎</a></li>
+<li><a href="#_9">参考:</a></li>
+<li><a href="#_10">是也乎</a><ul>
+<li><a href="#btw">btw.</a></li>
+</ul>
+</li>
+<li><a href="#_11">修订</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>好吧,这是有关如何在 
+<code>42分钟之内</code> 
+超高速上手 Python <code>开发</code> 的又一个不怎么靠谱的<code>心念</code>手册;-)</p>
+<h2 id="_1">概述</h2>
+<div class="codehilite"><pre><span></span>基于私人体验,分享主观感触
+完全 大妈 样儿, 任性建议!
+信了
+    有所得,都是您自个儿应该的!
+    没上手,一定是俺的错...
+不信
+    那就瞧个乐,没收您銭不是也乎?
+</pre></div>
+
+
+<p>随着互联网的发展,就是用 baidu 也可以搜索到越来越多的中文 Python 技术资料了,
+但是,这并没有令自学 Python 编程变成更加轻松!</p>
+<p>常见现象是:</p>
+<ul>
+<li>这么多教程应该看哪个?</li>
+<li>为什么我看了这么多教程,依然不会用 Python 来编程?</li>
+<li>到底应该怎么运行 Python 脚本/程序/软件 哪!?</li>
+<li>有问题应该问谁去?</li>
+<li>...</li>
+</ul>
+<p>但是, 从大妈这么些年和真正的小白接触, 观察大家各自用不同的姿势上手了 Python 的全过程,
+发现, 本质上都是 <code>心念</code> 的问题,自个儿吓自个儿, 多数情况是根本没有动用自个儿的头脑,
+先放弃了,然后各种专业的傲娇感动了自个儿,坚定 Python 一定哪儿有什么问题,
+然后, 才没有然后的.</p>
+<p>所以, 任性的尝试给出一个极简 <code>心念</code> 手册, 来帮助大家自学 Python 时保持 <code>正念</code>, 
+用最小的心智损耗, 在 <code>42</code> 分钟以内,
+获得两次以上的快感, 
+拥有对 Python 这门工具型脚本语言的全面自信.
+从而,可以愉快的自在和 Python 在一起玩耍下去...</p>
+<h2 id="_2">准入</h2>
+<p>是的, 听起来这么美好的事儿, 肯定是要有代价的!</p>
+<p>代价就是, 您必须有以下经验, 否则,得追加对应建议的时间, 才能继续
+这一极简的上手进程...</p>
+<ol>
+<li>心智健全, 这个非常关键, 否则持意曲解俺说的一切, 那真心没招儿的<ul>
+<li>怎么检验这点?</li>
+<li>首先, E文过关,敢于阅读整屏的 E文日志输出</li>
+<li>其次, 习惯使用 Google 搜索, 并习惯一次输入3个以上的关键字</li>
+<li>最后, 愿意尝试不同的编程体验,不纠结类似 括号一定要单独一行,这种细节</li>
+</ul>
+</li>
+<li>有编程经验, 已经建立起来基础的程序/代码/运行时 等概念<ul>
+<li>这样, 你嘦愉快的瞬间用以往的概念找到 Python 中的表述形式,就完成了上手</li>
+<li>否则, 推荐先学习一下 JavaScript, 掌握编程的基本元知识再说:<ul>
+<li>这样,目测得追加4小时</li>
+<li>0.5 小时熟悉 Chrome 的调试工具</li>
+<li>1 小时通读 JS 教程, 理解 DOM 的操作概念和过程</li>
+<li>1 小时练习 JS 基础数据结构</li>
+<li>1 小时练习 JS 函式的使用</li>
+<li>0.5 小时,完成一个简单的页面交互</li>
+<li>告诉自个儿,完成了一个软件的半成员</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>有靠谱环境, 这可能是相对困难的一方面<ul>
+<li>Linux/MAC 用户,比较幸福, 什么都是现成的, 而且各种爽利</li>
+<li>M$ 用户,请允许俺致以最大的同情, 然后,敬请自行先安装好:<ul>
+<li><a href="http://www.activestate.com/activepython">activestate.com/activepython</a></li>
+<li><a href="http://www.sublimetext.com/2">Sublime Text 2</a><ul>
+<li>并配置好 Python 支持插件</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="_3">福利:给文科森</h3>
+<p>~ <em><a href="MinimalistProgramStart">极简编程导念</a></em></p>
+<h2 id="_4">环境</h2>
+<p>在开始学习 Python 之前,需要先配置好 Python 的常用环境,
+这可能是个 <code>先有鳮,还是先有蛋</code> 的事儿,
+但是,就是这么任性!</p>
+<p>所谓常用环境指:</p>
+<ul>
+<li><a href="https://github.com/yyuu/pyenv">yyuu/pyenv</a><ul>
+<li>支持你任性的使用指定版本的 Python 环境</li>
+</ul>
+</li>
+<li><a href="https://pip.pypa.io/en/latest/installing.html">pip</a><ul>
+<li>支持你任性的安装想安装的第三方模块</li>
+</ul>
+</li>
+<li><a href="http://ipython.org/install.html">IPython</a><ul>
+<li>支持你任性的用各种姿势探索 Python </li>
+<li><code>残念:</code> 实在想推荐使用 <code>IPy[:] Notebook</code> 的,但是,涉及太多大型软件的支持了,对 M$ 用户实在是种折磨,先用基础的 <code>IP[:]</code> 吧...<ul>
+<li><code>PS:</code> 此种言及的大型是指 Unix 兼容系统中的,超过10M 都是大型软件了,不是 M$ 中100M 都算小软件的世界观...</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>关键是,在以上常用环境的配置过程中, 你将体验到 Python 的宏大生态环境,
+以及怎么接触,玩耍的通用过程.</p>
+<h2 id="_5">然后</h2>
+<p>先来个第一印象:</p>
+<p><img alt="120417-coffeeghost-q-in-py.png" src="http://zoomq.qiniudn.com/CPyUG/zoomquiet-design-collection/py101/120417-coffeeghost-q-in-py.png?imageView2/2/w/720" /></p>
+<ul>
+<li>这42行代码,是可执行的,</li>
+<li>同时包含了几乎 80% 的 Python 代码常见情景.</li>
+<li>来自: <a href="http://wiki.woodpecker.org.cn/moin/ZqQuickIntoPy">ZqQuickIntoPy - Woodpecker Wiki for CPUG</a></li>
+</ul>
+<h3 id="_6">开始</h3>
+<ul>
+<li>进入 IPython 交互式编程环境中<ul>
+<li>参考官方文档中的教程</li>
+<li>或参考 <a href="http://www.jb51.net/shouce/Pythonbbf/latest/">笨办法学 Python （Learn Python The Hard Way） — 笨办法学 Python 3.0 documentation</a> 前 21 课中有关部分</li>
+<li>多使用 <code>dir()</code>,<code>help()</code> 来检验运行时内存里的 Python 对象是否如自个儿的设想</li>
+<li>用10分钟,专心熟悉以下核心数据类型:<ul>
+<li>数字</li>
+<li>文本, UTF-8/中文 文本</li>
+<li>列表,嵌套列表,列表推导式 简单的 <code>for in</code> 循环</li>
+<li>字典,嵌套字典</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>用 Sublime Text 编写几个简短的脚本<ul>
+<li>在终端上运行, 检验自个儿的想法是否正确</li>
+<li>完成以下常见工程行为:<ul>
+<li>函式, 完成一个函式,可以拼接两行文本为新文件保存到硬盘</li>
+<li>模块, 将函式发布为一个模块,可以在另外一个脚本中调用</li>
+<li>文件, 调用此模块,将两个指定 <code>.txt</code> 文件的内容,逐行交错合并为一个新文件</li>
+<li>网络, 改进此模块,可以将两个指定网页的内容, 逐行交错合并为一个新文件</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>或是 <a href="http://www.jb51.net/shouce/Pythonbbf/latest/">笨办法学 Python （Learn Python The Hard Way） — 笨办法学 Python 3.0 documentation</a> 参考 22 课之后的有关部分练习<ul>
+<li>在 32分钟以内, 完成以上建议的行为</li>
+</ul>
+</li>
+</ul>
+<h2 id="_7">没有然后了</h2>
+<ul>
+<li>还要学习什么?</li>
+<li>不用了哪</li>
+<li>您已经掌握了 Python 了呢!<ul>
+<li>当然不是全部知识</li>
+<li>但是, 上手 Python 是来用的,不是来研究的</li>
+<li>Python 这种通用脚本语言, 就是能用 2% 的功能,完成 80% 常见任务的哪</li>
+<li>如果只是要通过 Python 了解什么是程序猿生活, 到此,基本已经有足够的体验可以和 码农们愉快的沟通了!</li>
+</ul>
+</li>
+<li>还有兴趣?<ul>
+<li>参考: <a href="https://github.com/vinta/awesome-python">vinta/awesome-python</a> 了解 Python 的任性范畴</li>
+<li>参考: <a href="https://github.com/aosabook/500lines">aosabook/500lines</a> 体验一下 500 行以内的 Python 程序能折腾出什么来</li>
+<li>参考: <a href="https://qdan.me/list/VL46v0rYbAgUsSIS">探索一门编程语言 | 轻单</a> 扎下去</li>
+</ul>
+</li>
+</ul>
+<p>真心就没有然后了,
+你已经是名合格的 Pythonista 了,
+自在的使用 Python 来完成梦想吧!</p>
+<h2 id="_8">知乎</h2>
+<ul>
+<li><a href="http://www.zhihu.com/question/20702054/answer/15908321">你是如何自学 Python 的？ - 陈铮的回答 - 知乎</a></li>
+</ul>
+<h2 id="_9">参考:</h2>
+<ul>
+<li><a href="https://docs.python.org/3/tutorial/index.html">The Python Tutorial — Python 3.4.3rc1 documentation</a></li>
+<li><a href="https://docs.python.org/2.7/tutorial/index.html">The Python Tutorial — Python 2.7.9 documentation</a></li>
+<li><a href="http://jeffknupp.com/blog/2014/02/04/starting-a-python-project-the-right-way/">Starting A Python Project The Right Way</a></li>
+<li><a href="https://realpython.com/learn/python-first-steps/">First Steps With Python - Real Python</a><ul>
+<li><a href="https://github.com/jacebrowning/template-python">jacebrowning/template-python</a></li>
+<li><a href="https://github.com/audreyr/cookiecutter">audreyr/cookiecutter</a></li>
+<li><a href="https://github.com/rcarmo/ink-bottle">rcarmo/ink-bottle</a></li>
+</ul>
+</li>
+<li>...</li>
+</ul>
+<h2 id="_10">是也乎</h2>
+<p>为毛有这篇文章?</p>
+<ul>
+<li>看过太多越来越长的 <code>入门教程</code></li>
+<li>回想自个儿真正上手其实就是那几个瞬间</li>
+<li>感觉,得有正式的形式来分享那几个瞬间</li>
+</ul>
+<h3 id="btw">btw.</h3>
+<blockquote>
+<p>以下两文同品
+有火腿味儿..</p>
+</blockquote>
+<ul>
+<li><a href="http://www.jianshu.com/p/67a0cf352986">不要轻易在简历上写我热爱编程，我热爱学习 - 简书</a></li>
+<li><img alt="why-girl-hard-coding.png" src="http://pyconcn.qiniudn.com/zoomquiet/res/snap/why-girl-hard-coding.png" /></li>
+</ul>
+<h2 id="_11">修订</h2>
+<ul>
+<li>150304 根据 OMY 的反馈,增补 <code>负基础</code> 的定义,以及进入的姿势</li>
+<li>150108 <code>开智青年故事会</code> 微群中被MM AT 出来的念头, 42分钟以内快速成型</li>
+</ul>
+        
+        
+        
+        
+        <hr class="clear" />
+
+
+    Author: <a href="http://zoomquiet.io">
+    <img
+      class="after"
+      src="http://zoomq.qiniudn.com/logos/zq-eyes-IMG_1987-64x64.JPG"
+      alt="Zoom.Quiet"
+      width="32"
+      height="32"
+    />
+    </a>
+      <i>
+        /<a href="mailto:i@zoomquiet.io">mail</a>
+      </i>
+    <b>
+      /<a href="mailto:https://www.gittip.com/ZoomQuiet/">
+        gittip
+        </a>
+    </b>
+    <i>
+        /<a href="https://github.com/ZoomQuiet">
+          github
+          </a>
+      </i>
+
+<br/>
+
+
+  
+
+    <div id="disqus_thread"></div>
+
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'wikizoomquietio'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+      </div> <!-- div#content -->
+      
+      
+      <div id="footer">
+        <p>
+          
+            Zoom.Quiet Personal Static Wiki |
+          
+          
+          <a href="_list.html">ls ./</a>
+          | 
+          Powered by <a href="http://markdoc.org/">Markdoc</a>
+          + <a href="https://gitcafe.com/wiki4zq/markdoc4zq">gitcafe</a>
+          + <a href="http://www.qiniu.com/about">七牛</a>
+
+        </p>
+
+      </div>
+      
+    
+    
+    
+    <hr class="clear" />
+
+
+
+  </body>
+</html>
