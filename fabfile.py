@@ -40,6 +40,12 @@ def hg_pahes():
             'date '.format(**env)
           )
 
+
+def pub():
+    build()
+    CNAME()
+    hg_pahes()
+
 '''
 env.py2sc = 'wiki/chaos2py4scientist/'
 env.book = '_book/'
