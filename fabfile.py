@@ -26,10 +26,11 @@ def reserve():
 def CNAME():
     local('ls -la {deploy_path}/ && '
             'cp -f {static_path}/CNAME {deploy_path}/ && '
+            'cp -f {static_path}/.nojekyll {deploy_path}/ && '
             'pwd '.format(**env)
         )
 
-def hg_pahes():
+def gh_pages():
     local('cd {deploy_path} && '
             'pwd && '
             'git st && '
@@ -44,7 +45,7 @@ def hg_pahes():
 def pub():
     build()
     CNAME()
-    hg_pahes()
+    gh_pages()
 
 '''
 env.py2sc = 'wiki/chaos2py4scientist/'
