@@ -1,3 +1,7 @@
+wiki/.Ulysses*
+.Ulysses*
+.DS_Store
+
 wiki/chaos2py4scientist/_book
 _book/
 
