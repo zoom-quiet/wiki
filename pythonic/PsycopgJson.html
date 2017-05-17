@@ -233,7 +233,7 @@ zoomq=# SELECT * FROM json_test;
 <span class="k">print</span> <span class="n">data</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
 
 <span class="c1"># from psycopg2.extras.Jsonで辞書型を変換</span>
-<span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">u&quot;INSERT INTO json_test(data) VALUES (</span><span class="si">%s</span><span class="s2">)&quot;</span><span class="p">,</span>
+<span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="sa">u</span><span class="s2">&quot;INSERT INTO json_test(data) VALUES (</span><span class="si">%s</span><span class="s2">)&quot;</span><span class="p">,</span>
     <span class="p">[</span><span class="n">psycopg2</span><span class="o">.</span><span class="n">extras</span><span class="o">.</span><span class="n">Json</span><span class="p">({</span><span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">11</span>
         <span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;是也乎&#39;</span>
         <span class="p">,</span> <span class="s2">&quot;birthday&quot;</span><span class="p">:</span><span class="s2">&quot;2013-11-11&quot;</span>

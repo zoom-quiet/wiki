@@ -1,3 +1,6 @@
+wiki/.Ulysses*
+_static/media/.DS_Store
+.DS_Store
 
 *.py[cod]
 
