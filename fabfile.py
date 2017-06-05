@@ -16,14 +16,14 @@ def build():
             'pwd '.format(**env)
         )
 
-def serve():
+def _serve():
     local('markdoc serve')
 
-def reserve():
+def _reserve():
     build()
-    serve()
+    _serve()
 
-def CNAME():
+def _CNAME():
     local('ls -la {deploy_path}/ && '
             'cp -f {static_path}/CNAME {deploy_path}/ && '
             'cp -f {static_path}/.nojekyll {deploy_path}/ && '
@@ -44,7 +44,7 @@ def gh_pages():
 
 def pub():
     build()
-    CNAME()
+    _CNAME()
     gh_pages()
 
 '''
