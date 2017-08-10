@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+    "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+      xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/">
+  
+  <head>
+    
+    
+      
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+      
+      
+      <title>
+        如何 Pythonic 的折腾 QR 码? |
+        Zoom.Quiet Personal Static Wiki 
+      </title>
+      
+      
+        <!-- YUI CSS reset, fonts, base -->
+        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.0.0/build/cssreset/reset-min.css&amp;3.0.0/build/cssfonts/fonts-min.css&amp;3.0.0/build/cssbase/base-min.css" media="screen, projection" />
+        
+        <link rel="stylesheet" type="text/css" href="../media/css/custom.css" media="screen, projection" />
+        <link rel="stylesheet" type="text/css" href="../media/css/style.css" media="screen, projection" />
+        <link rel="stylesheet" type="text/css" href="../media/css/pygments.css" media="screen, projection" />
+      
+      
+      
+      
+      
+        
+          <!-- Google Analytics -->
+          <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-2331528-6']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+              var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+              ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+            })();
+          </script>
+        
+      
+    
+  </head>
+  
+  <body >
+    
+      
+      
+    
+<div class="site-logo">
+  <img src="http://zoomq.qiniudn.com/logos/zq-eyes-IMG_1987-64x64.JPG?imageView2/2/w/32" />
+  </div>
+
+        
+          
+  
+    <ol id="breadcrumbs">
+      
+        <li class="crumb-0 not-last">
+          
+            <a href="../">index</a>
+          
+        </li>
+      
+        <li class="crumb-1 not-last">
+          
+            <a href="./">ts;dr</a>
+          
+        </li>
+      
+        <li class="crumb-2 last">
+          
+            170810cv2qrcode-by-python
+          
+        </li>
+      
+    </ol> <!-- ol#breadcrumbs -->
+  
+
+        
+      
+      
+      <div id="content">
+        
+        
+        
+        <h1 id="pythonic-qr">如何 Pythonic 的折腾 QR 码?</h1>
+<p>~ 兼论什么样的模块值得嗯哼...</p>
+<div class="toc">
+<ul>
+<li><a href="#pythonic-qr">如何 Pythonic 的折腾 QR 码?</a><ul>
+<li><a href="#_1">背景</a></li>
+<li><a href="#_2">嗯哼</a><ul>
+<li><a href="#irmarker">IRMarker</a></li>
+<li><a href="#qrmark">QRMark</a></li>
+</ul>
+</li>
+<li><a href="#_3">撞哉</a></li>
+<li><a href="#_4">柳岸</a></li>
+<li><a href="#_5">致谢</a></li>
+<li><a href="#ps">PS:</a></li>
+</ul>
+</li>
+<li><a href="#_6">(￣▽￣)</a></li>
+</ul>
+</div>
+<h2 id="_1">背景</h2>
+<p>最近在折腾机器视觉相关的项目, 其中有一项核心需求是:</p>
+<ul>
+<li>实时的从摄像头视频中</li>
+<li>识别出特定的标记物</li>
+<li>并对多个标记物可以区别</li>
+<li>进而记录所有标记物的 ID 和屏幕坐标</li>
+<li>记录下来以便另外的系统事后统计/分析/可视化</li>
+</ul>
+<h2 id="_2">嗯哼</h2>
+<h3 id="irmarker">IRMarker</h3>
+<p>~ 即红外线标定器</p>
+<ul>
+<li>之前折腾了很长时间, 配合创客自制了专用的 IRMarker</li>
+<li>开始是 850nm 的, 因为没有红暴, 人眼基本不可感知<ul>
+<li>但是,发现太弱, 在复杂现实光线中杯具</li>
+</ul>
+</li>
+<li>然后,还是传统的 940nm ,人眼微弱感知<ul>
+<li>但是,能量发射足</li>
+<li>相关元件品种/产量也大</li>
+</ul>
+</li>
+<li>可惜:<ul>
+<li>红外光在视频中只有亮度没有颜色</li>
+<li>和阳光/反射/灯泡 等等所有亮度能到 <code>(255,255,255)</code> 的</li>
+<li>图像中和 IRMarker 的光没有区别</li>
+<li>尝试用特殊的点阵图形来识别+区分</li>
+<li>那叫个蛋痛...</li>
+</ul>
+</li>
+</ul>
+<h3 id="qrmark">QRMark</h3>
+<p>~ 即, 纸质二维码</p>
+<p>首先可以搜索到: <a href="https://pypi.python.org/pypi/zbar/">zbar 0.10 : Python Package Index</a></p>
+<ul>
+<li>这货已经有 8 年没有任何更新了</li>
+<li>而且 win 版本也没有, 是第三方好人折腾了一个</li>
+<li>这怎么敢用嚓...</li>
+</ul>
+<p>然后继续尝试 Google+Youtube 大法:</p>
+<ul>
+<li><a href="http://zqdevres.qiniucdn.com/data/20170808172611/index.html">Scanning QR Codes: Verifying the finder patterns - AI Shack - Tutorials for OpenCV, computer vision, deep learning, image processing, neural networks and artificial intelligence.</a></li>
+<li><a href="https://www.youtube.com/watch?v=NxHdIdNXIO4">OpenCV: QR Code detection and extraction - YouTube</a><ul>
+<li><a href="http://zqdevres.qiniucdn.com/data/20170807165718/index.html">Pocket: OpenCV: QR Code detection and extraction</a></li>
+</ul>
+</li>
+<li><a href="https://www.youtube.com/watch?v=c8EhR8AYsoM">QR code detection and decode in python - YouTube</a><ul>
+<li>...</li>
+</ul>
+</li>
+<li><a href="https://blog.callmewhy.com/2016/04/23/opencv-find-qrcode-position/">学习笔记：使用 OpenCV 识别 QRCode \| Why's Blog</a></li>
+</ul>
+<p>果断有狠人, 根据 QR Code 标准, 准备用 OpenCV 直接手工来解析...</p>
+<p>好在所有知识点都是标准的:</p>
+<p><img alt="qr-code-parts.png（PNG 图像，1229x624 像素） - 缩放 (88%)" src="http://openmindclub.qiniucdn.com/res/usee/snap/qr-code-parts.png?imageView2/2/w/420" /></p>
+<p>QR Code 结构</p>
+<p><img alt="QR code" src="http://zqdevres.qiniucdn.com/data/20170807161848/8fe49b7a7cfcbe20f134a592dcc5ca20_b.png" /></p>
+<p>QR 形式数据读取顺序</p>
+<p><img alt="QR" src="http://zqdevres.qiniucdn.com/data/20170807161848/aae80a14bb8286db81fbb87f921da65a_b.png" /></p>
+<p>QR 解码顺序...</p>
+<p><img alt="cv2.RETR_TREE" src="http://zqdevres.qiniucdn.com/data/20170807165536/61d238c7jw1f35n5f1l1qj218g0xcaei.jpg" /></p>
+<p>cv2.findContours 函式 cv2.RETR_TREE 模式的嵌套结构</p>
+<p><img alt="QR 标定点" src="http://zqdevres.qiniucdn.com/data/20170807165536/61d238c7gw1f36lht551bj214l0l3jto.jpg" /></p>
+<p>QR 标定点识别方法之一</p>
+<p><img alt="QR 标定点识别" src="http://zqdevres.qiniucdn.com/data/20170808172634/qr-finder-pattern.jpg" />
+QR 标定点识别方法之二</p>
+<p>...</p>
+<p><img alt="QRCodeOrientation" src="http://paginas.fe.up.pt/~ee09082/images/QRCodeOrientation.png" /></p>
+<p>QR 方向判别</p>
+<p>所以,纯 OpenCV 的 QR 识别思路是明确的:</p>
+<ul>
+<li>图像预处理-&gt;二值化处理</li>
+<li>根据 <code>cv2.findContours</code> 的结果,找到吻合 <code>Position Detection Pattern</code> 的结构</li>
+<li>如果几个嵌套盒结构间的空间关系或是之间的 <code>Timing</code> 数据吻合 QR 标准</li>
+<li>则推导出对应 QR 码的有效面积</li>
+<li>再进行整形</li>
+<li>然后根据 QR 的数据区黑白变化提取为 0/1 值, 再进行标准的 decode 就还原为文字了</li>
+</ul>
+<p><img alt="bitsextraction2" src="http://zqdevres.qiniucdn.com/data/20170809232225/bitsextraction2.png" /></p>
+<h2 id="_3">撞哉</h2>
+<ul>
+<li>一切按照思路以及代码</li>
+<li>很快冲过 单一 QR 码在视频中的情况</li>
+<li>当然, 最后读取内容还是用 zbar</li>
+<li>但是, 多个 QR 码出现在视频中时</li>
+<li>杯具了:<ul>
+<li>无论怎么调整参数</li>
+<li>明明非常清晰的图像</li>
+<li>预处理也非常良好</li>
+</ul>
+</li>
+</ul>
+<p><img alt="qrcode-findContours-edges.png（PNG 图像，173x502 像素）" src="http://openmindclub.qiniucdn.com/res/usee/snap/qrcode-findContours-edges.png?imageView2/2/w/360" /></p>
+<p><strong>但是!</strong> 原先工作良好的代码,死活就是识别不出所有 <code>Position Detection Pattern</code> </p>
+<h2 id="_4">柳岸</h2>
+<p>~ 碎了一觉起来...</p>
+<ul>
+<li>想想为毛这么多年就没有 zbar 同类模块出没?</li>
+<li>回去看了一下官网:<a href="http://zbar.sourceforge.net/">ZBar bar code reader</a></li>
+</ul>
+<p><img alt="zbar" src="http://zbar.sourceforge.net/img/zbar.200.png" /></p>
+<p>嗯哼? 感觉不是大家懒, 而是 QR Code 标准又没有变, zbar 完美解决了问题的话, 
+自然没有后来 <code>Yet another zbar</code> 之类的嗯哼了...</p>
+<p>只是, 对应python 模块的文档实在简洁, 搜索案例代码:</p>
+<p><a href="http://kurokesu.com/main/2016/08/22/unusual-tasks-with-video-files-reading-bar-codes-and-qr-codes/">» Unusual tasks with video files – reading bar-codes and qr-codes</a></p>
+<p>才发现:</p>
+<div class="codehilite"><pre><span class="p">...</span>
+<span class="k">for</span> <span class="n">l</span> <span class="n">in</span> <span class="n">symbol</span><span class="p">.</span><span class="n">location</span><span class="o">:</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">str</span><span class="p">(</span><span class="n">symbol</span><span class="p">.</span><span class="n">type</span><span class="p">)</span> <span class="o">+</span> <span class="err">&#39;</span><span class="o">:</span> <span class="err">&#39;</span> <span class="o">+</span> <span class="n">str</span><span class="p">(</span><span class="n">symbol</span><span class="p">.</span><span class="n">data</span><span class="p">)</span> <span class="o">+</span> <span class="err">&#39;</span> <span class="o">/</span> <span class="err">&#39;</span> <span class="o">+</span> <span class="n">str</span><span class="p">(</span><span class="n">symbol</span><span class="p">.</span><span class="n">quality</span><span class="p">)</span>
+    <span class="p">...</span>
+</pre></div>
+
+
+<p><img alt="symbol.location" src="http://kurokesu.com/main/wp-content/uploads/2016/08/out-1.gif" /></p>
+<p>嗯哼?! what?! 人家 zbar 一直就支持:</p>
+<ul>
+<li>直接识别并读取多个 QR 码</li>
+<li>并返回每个 QR 码的坐标</li>
+<li><code>눈_눈</code> &lt;-- 那为毛,内么多文章都是拼命用各种姿势通过 OpenCV 识别出 QR 码<ul>
+<li>然后小心的剪裁出来</li>
+<li>再合理旋转,平整</li>
+<li>最后喂给 zbar 只有 QR 砩的图片片段?!</li>
+</ul>
+</li>
+<li>结果, 核心代码就这么几行</li>
+</ul>
+<p>:</p>
+<div class="codehilite"><pre><span class="n">import</span> <span class="n">zbar</span>
+<span class="n">from</span> <span class="n">PIL</span> <span class="n">import</span> <span class="n">Image</span>
+
+<span class="p">...</span>
+<span class="n">scanner</span> <span class="o">=</span> <span class="n">zbar</span><span class="p">.</span><span class="n">ImageScanner</span><span class="p">()</span>
+<span class="n">scanner</span><span class="p">.</span><span class="n">parse_config</span><span class="p">(</span><span class="err">&#39;</span><span class="n">enable</span><span class="err">&#39;</span><span class="p">)</span>
+<span class="n">zimage</span> <span class="o">=</span> <span class="n">zbar</span><span class="p">.</span><span class="n">Image</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">Y800</span><span class="err">&#39;</span><span class="p">,</span> <span class="n">raw</span><span class="p">)</span>
+<span class="n">scanner</span><span class="p">.</span><span class="n">scan</span><span class="p">(</span><span class="n">zimage</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">symbol</span> <span class="n">in</span> <span class="n">zimage</span><span class="o">:</span>
+    <span class="k">for</span> <span class="n">l</span> <span class="n">in</span> <span class="n">symbol</span><span class="p">.</span><span class="n">location</span><span class="o">:</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">str</span><span class="p">(</span><span class="n">symbol</span><span class="p">.</span><span class="n">type</span><span class="p">)</span> <span class="o">+</span> <span class="err">&#39;</span><span class="o">:</span> <span class="err">&#39;</span> <span class="o">+</span> <span class="n">str</span><span class="p">(</span><span class="n">symbol</span><span class="p">.</span><span class="n">data</span><span class="p">)</span> <span class="o">+</span> <span class="err">&#39;</span> <span class="o">/</span> <span class="err">&#39;</span> <span class="o">+</span> <span class="n">str</span><span class="p">(</span><span class="n">symbol</span><span class="p">.</span><span class="n">quality</span><span class="p">)</span>
+</pre></div>
+
+
+<p>快速重构原先代码, 几下就完成了原定目标</p>
+<h2 id="_5">致谢</h2>
+<p>-&gt; <a href="https://blog.callmewhy.com/about/">汪海</a></p>
+<p>一位认真的普通程序猿, 目测也是折腾了 10小时以上, 幸好依细致的记录了各种基础知识点,
+才令俺及时回过味儿来, 找到正确的道路...</p>
+<p>特别的回应一下依后来没有嗯哼下去的: <code>仿射变换</code></p>
+<ul>
+<li>直接使用 <a href="http://www.pyimagesearch.com/2014/08/25/4-point-opencv-getperspective-transform-example/">4 Point OpenCV getPerspective Transform Example - PyImageSearch</a> 中给出的两个函式:</li>
+<li><code>order_points()</code> -&gt; 获得合理的4点坐标</li>
+<li>代入 -&gt; <code>four_point_transform()</code> -&gt; 就获得修正后的图片了.</li>
+</ul>
+<h2 id="ps">PS:</h2>
+<p><a href="http://www.uco.es/investiga/grupos/ava/node/26">ArUco: a minimal library for Augmented Reality applications based on OpenCV | Aplicaciones de la Visión Artificial</a></p>
+<p><img alt="ArUco" src="http://zqdevres.qiniucdn.com/data/20170809231640/board.png" /></p>
+<p>ArUco 更小的标定码形式</p>
+<p><a href="http://docs.opencv.org/master/d5/dae/tutorial_aruco_detection.html">OpenCV: Detection of ArUco Markers</a></p>
+<p>问题在, 必须 OpenCV 3.0 以上版本环境才支持!</p>
+<h1 id="_6">(￣▽￣)</h1>
+<ul>
+<li>170810 残念</li>
+<li>170809 南墙</li>
+<li>170808 部分达成</li>
+<li>170807 折腾</li>
+<li>170806 动念</li>
+</ul>
+        
+        
+        
+        
+        <hr class="clear" />
+
+
+    Author: <a href="http://zoomquiet.io">
+    <img
+      class="after"
+      src="http://zoomq.qiniudn.com/logos/zq-eyes-IMG_1987-64x64.JPG"
+      alt="Zoom.Quiet"
+      width="32"
+      height="32"
+    />
+    </a>
+      <i>
+        /<a href="mailto:i@zoomquiet.io">mail</a>
+      </i>
+    <b>
+      /<a href="https://gratipay.com/~ZoomQuiet/">
+        gittip
+        </a>
+    </b>
+    <i>
+        /<a href="https://github.com/ZoomQuiet">
+          github
+          </a>
+      </i>
+
+<br/>
+
+
+      </div> <!-- div#content -->
+      
+      
+      <div id="footer">
+        <p>
+          
+            Zoom.Quiet Personal Static Wiki |
+          
+          
+          <a href="_list.html">ls ./</a>
+          | 
+          Powered by <a href="http://markdoc.org/">Markdoc</a>
+          + <a href="https://github.com/zoom-quiet/wiki">github</a>
+          + <a href="https://gratipay.com/~ZoomQuiet/">gittip</a>
+          + <a href="http://www.qiniu.com/about">七牛</a>
+
+        </p>
+
+      </div>
+      
+    
+    
+    
+    <hr class="clear" />
+
+
+
+    <div id="disqus_thread"></div>
+
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'wikizoomquietio'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+  </body>
+</html>
