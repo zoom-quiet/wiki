@@ -30,7 +30,7 @@ def _CNAME():
             'pwd '.format(**env)
         )
 
-def gh_pages():
+def _gh_pages():
     local('cd {deploy_path} && '
             'pwd && '
             'git st && '
@@ -45,7 +45,8 @@ def gh_pages():
 def pub():
     build()
     _CNAME()
-    gh_pages()
+    _gh_pages()
+
 
 '''
 env.py2sc = 'wiki/chaos2py4scientist/'

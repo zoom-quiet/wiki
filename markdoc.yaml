@@ -10,7 +10,7 @@ author_email: i@zoomquiet.io
 author_web: http://zoomquiet.io
 author_github: ZoomQuiet
 author_coderwall: zoomquiet
-#author_gittip: https://gratipay.com/~ZoomQuiet/
+author_gittip: https://gratipay.com/~ZoomQuiet/
 
 # Directories
 hide-prefix: "."
@@ -32,9 +32,5 @@ use-default-templates: true
 markdown:
   safe-mode: false
   output-format: xhtml1
-  extensions:
-    - codehilite # the important bit
-    - def_list
-    - headerid
-    - toc
+  extensions: [codehilite, def_list, headerid, toc, wikilinks]
 

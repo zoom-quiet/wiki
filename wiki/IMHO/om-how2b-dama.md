@@ -224,8 +224,9 @@ e.g
 
 **奋起宣言!**
 
-- http://wiki.woodpecker.org.cn/moin/RouseChina
-- 2006
+~ http://wiki.woodpecker.org.cn/moin/RouseChina
+
+2006:
 
     每天至少挤一刻钟, 认真解答邮件列表/IRC/QQ群中初学者问题!
     每周至少挤两小时, 整理自己的新学将成功或失败体验分享出来!
