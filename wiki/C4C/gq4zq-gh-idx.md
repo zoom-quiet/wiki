@@ -17,7 +17,7 @@ github 用的人不少, 但是, 用的爽的不多
 ## 提纲
 ~ 直觉的
 
-- 0: 为什么 github
+- [0: 为什么 github](Gq4Dama2Gh1Why)
     + 什么是 github?
     + 相比同类好在哪?
     + 挫在哪?
