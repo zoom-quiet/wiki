@@ -30,7 +30,7 @@
 
 - 开智书友会群友简介
     https://www.evernote.com/shard/s9/sh/562facab-f81f-4f7d-95c2-9092a0057637/21074f8b1f73670c
-    - 【开智微群】入群指南 http://t.cn/RAEvwtv
+    - [开智微群]入群指南 http://t.cn/RAEvwtv
     - 仅仅积累三个月的定期主题分享,完成了一本品质非常高的跨界图书出版
     - 详细参考: "好社群的特点" http://t.cn/RAEvKl1
 - 而另外类似 "思享空间"(ideasharespace) 的微群
@@ -41,7 +41,7 @@
 介绍了 CSDN 以及 OSTC 大会
 
 - 参考:http://zoomq.qiniudn.com/CPyUG/150328-OSTC/150328_ostc_pm8_girls_talk.MP3
--【2015开源技术大会】程序媛的小想法 - 程序媛 - OGX社区 
+-[2015开源技术大会]程序媛的小想法 - 程序媛 - OGX社区 
     https://ogx.io/topics/5517eb79692d6971dbe70400
 - 明确 mcross 更加贴近私人关系群,而不是面向主题领域的公开社区
 - 所以,没有合作的必要
