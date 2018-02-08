@@ -217,10 +217,10 @@ QR 标定点识别方法之二</p>
 <p>只是, 对应python 模块的文档实在简洁, 搜索案例代码:</p>
 <p><a href="http://kurokesu.com/main/2016/08/22/unusual-tasks-with-video-files-reading-bar-codes-and-qr-codes/">» Unusual tasks with video files – reading bar-codes and qr-codes</a></p>
 <p>才发现:</p>
-<div class="codehilite"><pre><span class="p">...</span>
-<span class="k">for</span> <span class="n">l</span> <span class="n">in</span> <span class="n">symbol</span><span class="p">.</span><span class="n">location</span><span class="o">:</span>
-    <span class="n">text</span> <span class="o">=</span> <span class="n">str</span><span class="p">(</span><span class="n">symbol</span><span class="p">.</span><span class="n">type</span><span class="p">)</span> <span class="o">+</span> <span class="err">&#39;</span><span class="o">:</span> <span class="err">&#39;</span> <span class="o">+</span> <span class="n">str</span><span class="p">(</span><span class="n">symbol</span><span class="p">.</span><span class="n">data</span><span class="p">)</span> <span class="o">+</span> <span class="err">&#39;</span> <span class="o">/</span> <span class="err">&#39;</span> <span class="o">+</span> <span class="n">str</span><span class="p">(</span><span class="n">symbol</span><span class="p">.</span><span class="n">quality</span><span class="p">)</span>
-    <span class="p">...</span>
+<div class="codehilite"><pre><span></span>...
+for l in symbol.location:
+    text = str(symbol.type) + &#39;: &#39; + str(symbol.data) + &#39; / &#39; + str(symbol.quality)
+    ...
 </pre></div>
 
 
@@ -238,18 +238,18 @@ QR 标定点识别方法之二</p>
 <li>结果, 核心代码就这么几行</li>
 </ul>
 <p>:</p>
-<div class="codehilite"><pre><span class="n">import</span> <span class="n">zbar</span>
-<span class="n">from</span> <span class="n">PIL</span> <span class="n">import</span> <span class="n">Image</span>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">zbar</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
 
-<span class="p">...</span>
-<span class="n">scanner</span> <span class="o">=</span> <span class="n">zbar</span><span class="p">.</span><span class="n">ImageScanner</span><span class="p">()</span>
-<span class="n">scanner</span><span class="p">.</span><span class="n">parse_config</span><span class="p">(</span><span class="err">&#39;</span><span class="n">enable</span><span class="err">&#39;</span><span class="p">)</span>
-<span class="n">zimage</span> <span class="o">=</span> <span class="n">zbar</span><span class="p">.</span><span class="n">Image</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">Y800</span><span class="err">&#39;</span><span class="p">,</span> <span class="n">raw</span><span class="p">)</span>
-<span class="n">scanner</span><span class="p">.</span><span class="n">scan</span><span class="p">(</span><span class="n">zimage</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="n">scanner</span> <span class="o">=</span> <span class="n">zbar</span><span class="o">.</span><span class="n">ImageScanner</span><span class="p">()</span>
+<span class="n">scanner</span><span class="o">.</span><span class="n">parse_config</span><span class="p">(</span><span class="s1">&#39;enable&#39;</span><span class="p">)</span>
+<span class="n">zimage</span> <span class="o">=</span> <span class="n">zbar</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="s1">&#39;Y800&#39;</span><span class="p">,</span> <span class="n">raw</span><span class="p">)</span>
+<span class="n">scanner</span><span class="o">.</span><span class="n">scan</span><span class="p">(</span><span class="n">zimage</span><span class="p">)</span>
 
-<span class="k">for</span> <span class="n">symbol</span> <span class="n">in</span> <span class="n">zimage</span><span class="o">:</span>
-    <span class="k">for</span> <span class="n">l</span> <span class="n">in</span> <span class="n">symbol</span><span class="p">.</span><span class="n">location</span><span class="o">:</span>
-        <span class="n">text</span> <span class="o">=</span> <span class="n">str</span><span class="p">(</span><span class="n">symbol</span><span class="p">.</span><span class="n">type</span><span class="p">)</span> <span class="o">+</span> <span class="err">&#39;</span><span class="o">:</span> <span class="err">&#39;</span> <span class="o">+</span> <span class="n">str</span><span class="p">(</span><span class="n">symbol</span><span class="p">.</span><span class="n">data</span><span class="p">)</span> <span class="o">+</span> <span class="err">&#39;</span> <span class="o">/</span> <span class="err">&#39;</span> <span class="o">+</span> <span class="n">str</span><span class="p">(</span><span class="n">symbol</span><span class="p">.</span><span class="n">quality</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">symbol</span> <span class="ow">in</span> <span class="n">zimage</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">symbol</span><span class="o">.</span><span class="n">location</span><span class="p">:</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">symbol</span><span class="o">.</span><span class="n">type</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">symbol</span><span class="o">.</span><span class="n">data</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; / &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">symbol</span><span class="o">.</span><span class="n">quality</span><span class="p">)</span>
 </pre></div>
 
 
