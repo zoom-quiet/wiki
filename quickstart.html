@@ -100,20 +100,20 @@ of Python, including Mac OS X, Ubuntu (and derivatives) and Fedora.</p>
 </ul>
 <h2 id="installation">Installation</h2>
 <p>You can use either <code>easy_install</code> or <a href="http://pip.openplans.org/">pip</a> to install Markdoc:</p>
-<div class="codehilite"><pre><span></span>$ easy_install Markdoc <span class="c1"># OR</span>
-$ pip install Markdoc
+<div class="codehilite"><pre><span class="nv">$ </span>easy_install Markdoc <span class="c"># OR</span>
+<span class="nv">$ </span>pip install Markdoc
 </pre></div>
 
 
 <p>Note that you are likely to see a lot of scary-looking output from both
 commands; nevertheless, you can tell whether installation was successful by
 looking at the last line of the output. With <code>easy_install</code>, this should be:</p>
-<div class="codehilite"><pre><span></span>Finished processing dependencies for Markdoc
+<div class="codehilite"><pre>Finished processing dependencies for Markdoc
 </pre></div>
 
 
 <p>And with <code>pip install</code>:</p>
-<div class="codehilite"><pre><span></span>Successfully installed ... Markdoc ...
+<div class="codehilite"><pre>Successfully installed ... Markdoc ...
 </pre></div>
 
 
@@ -123,7 +123,7 @@ amongst them.</p>
 <h3 id="initializing-the-wiki">Initializing the Wiki</h3>
 <p>The <code>markdoc init</code> command creates a new wiki. It also accepts a <code>--vcs-ignore</code>
 option which will automatically create the appropriate ignore file for your VCS.</p>
-<div class="codehilite"><pre><span></span>$ markdoc init my-wiki --vcs-ignore hg
+<div class="codehilite"><pre><span class="nv">$ </span>markdoc init my-wiki --vcs-ignore hg
 markdoc.vcs-ignore: INFO: Writing ignore file to .hgignore
 markdoc.init: INFO: Wiki initialization <span class="nb">complete</span>
 markdoc.init: INFO: Your new wiki is at: .../my-wiki
@@ -132,13 +132,13 @@ markdoc.init: INFO: Your new wiki is at: .../my-wiki
 
 <p>If you’re using SVN, you have to take a few more steps to set the <code>svn:ignore</code>
 property on the directory:</p>
-<div class="codehilite"><pre><span></span>$ markdoc init my-wiki --vcs-ignore cvs
+<div class="codehilite"><pre><span class="nv">$ </span>markdoc init my-wiki --vcs-ignore cvs
 markdoc.vcs-ignore: INFO: Writing ignore file to .cvsignore
 markdoc.init: INFO: Wiki initialization <span class="nb">complete</span>
 markdoc.init: INFO: Your new wiki is at: .../my-wiki
-$ <span class="nb">cd</span> my-wiki/
-$ svn propset svn:ignore -F .cvsignore
-$ rm .cvsignore
+<span class="nv">$ </span><span class="nb">cd </span>my-wiki/
+<span class="nv">$ </span>svn propset svn:ignore -F .cvsignore
+<span class="nv">$ </span>rm .cvsignore
 </pre></div>
 
 
@@ -146,9 +146,9 @@ $ rm .cvsignore
 <p>Documents in a Markdoc wiki are located under the <code>wiki/</code> subdirectory, and are
 plain Markdown files. Typically documents have a <code>.md</code> file extension, but in
 the <a href="configuration#building">wiki configuration</a> you can specify others.</p>
-<div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> my-wiki/
-$ vim wiki/somefile.md
-<span class="c1"># ... write some documents ...</span>
+<div class="codehilite"><pre><span class="nv">$ </span><span class="nb">cd </span>my-wiki/
+<span class="nv">$ </span>vim wiki/somefile.md
+<span class="c"># ... write some documents ...</span>
 </pre></div>
 
 
@@ -156,7 +156,7 @@ $ vim wiki/somefile.md
 <p>Markdoc comes with a default set of templates and stylesheets, so you can build
 your wiki right away. Just run <code>markdoc build</code>, and all the HTML will be
 generated and output into the <code>.html/</code> sub-directory (known as the HTML root).</p>
-<div class="codehilite"><pre><span></span>$ markdoc build
+<div class="codehilite"><pre><span class="nv">$ </span>markdoc build
 </pre></div>
 
 
@@ -164,7 +164,7 @@ generated and output into the <code>.html/</code> sub-directory (known as the HT
 <p>You can view all the HTML in a browser easily by running the built-in server.
 <code>markdoc serve</code> accepts a large number of options, but on its own will serve
 your documentation on port 8008.</p>
-<div class="codehilite"><pre><span></span>$ markdoc serve
+<div class="codehilite"><pre><span class="nv">$ </span>markdoc serve
 markdoc.serve: INFO: Serving on http://127.0.0.1:8008
 </pre></div>
 
