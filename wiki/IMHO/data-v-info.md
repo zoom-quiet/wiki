@@ -4,7 +4,7 @@
 ~直觉式的阐述个人当前数据可视化世界观
 
 
-![datav2vinfo.png(PNG 图像,776x814 像素) -  Graphviz 生成](http://zoomq.qiniudn.com/ZQCollection/map/datav2vinfo.png?imageView2/2/w/600)
+![datav2vinfo.png(PNG 图像,776x814 像素) -  Graphviz 生成](http://http://0.zoomquiet.top/ZQCollection/map/datav2vinfo.png?imageView2/2/w/600)
 
 
 - 源代码: [datav2vinfo.dot](https://bitbucket.org/ZoomQuiet/tangle/src/f7d3402616263fe1ba3b9fd360c623e257349f1d/dot/obp/datav2vinfo.dot?at=default)
