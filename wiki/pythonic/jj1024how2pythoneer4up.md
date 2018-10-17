@@ -47,6 +47,8 @@ juejin.im 程序猿节日专题约稿要求:
 
 > 获得 2018 年度诺贝尔经济学奖的 Paul Romer 就是一位 Python 编程语言的使用者,
 > 在对比了各种数据分析平台后, 大力宣扬  Jupyter 平台的开放和便利...
+> 
+> --> [Jupyter, Mathematica, and the Future of the Research Paper – Paul Romer](https://paulromer.net/jupyter-mathematica-and-the-future-of-the-research-paper/)
 
 等等, 各种成功故事, 都将 Python 的名望在推高.
 

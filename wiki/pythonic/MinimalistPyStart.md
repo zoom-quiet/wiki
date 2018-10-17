@@ -95,7 +95,7 @@
 
 先来个第一印象:
 
-![120417-coffeeghost-q-in-py.png](http://zoomq.qiniudn.com/CPyUG/zoomquiet-design-collection/py101/120417-coffeeghost-q-in-py.png?imageView2/2/w/720)
+![120417-coffeeghost-q-in-py.png](http://0.zoomquiet.top/CPyUG/zoomquiet-design-collection/py101/120417-coffeeghost-q-in-py.png?imageView2/2/w/720)
 
 
 - 这42行代码,是可执行的,
@@ -176,7 +176,7 @@
 > 有火腿味儿..
 
 - [不要轻易在简历上写我热爱编程，我热爱学习 - 简书](http://www.jianshu.com/p/67a0cf352986)
-- ![why-girl-hard-coding.png](http://pyconcn.qiniudn.com/zoomquiet/res/snap/why-girl-hard-coding.png)
+- ![why-girl-hard-coding.png](http://pyconcn.zoomquiet.top/zoomquiet/res/snap/why-girl-hard-coding.png)
 
 
 ## 修订
