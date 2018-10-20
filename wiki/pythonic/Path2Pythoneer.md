@@ -14,11 +14,11 @@ e.g. [微信开发学习路线](http://bss.csdn.net/m/topic/learning_path_weixin
 
 ## 图谱
 
-![path2pythoneer.png](http://zoomq.qiniucdn.com/ZQCollection/map/path2pythoneer.png?imageView2/2/h/420)
+![path2pythoneer.png](http://0.zoomquiet.top/ZQCollection/map/path2pythoneer.png?imageView2/2/h/420)
 
-- [大图](http://zoomq.qiniucdn.com/ZQCollection/map/path2pythoneer.png)
-- [另图](http://zoomq.qiniucdn.com/ZQCollection/map/path2pythoneer_nearto.png)
-- [源码](http://zoomq.qiniucdn.com/ZQCollection/map/path2pythoneer.dot)
+- [大图](http://0.zoomquiet.top/ZQCollection/map/path2pythoneer.png)
+- [另图](http://0.zoomquiet.top/ZQCollection/map/path2pythoneer_nearto.png)
+- [源码](http://0.zoomquiet.top/ZQCollection/map/path2pythoneer.dot)
 
 
 
@@ -44,7 +44,7 @@ e.g. [微信开发学习路线](http://bss.csdn.net/m/topic/learning_path_weixin
 ### PS
 图谱使用伟大的绘图工具: [graphviz](http://www.graphviz.org/About.php)
 开源工具, 所以,也提供了源代码,欢迎大家
-[下载](http://zoomq.qiniucdn.com/ZQCollection/map/path2pythoneer.dot), 用自个儿的思路重构
+[下载](http://0.zoomquiet.top/ZQCollection/map/path2pythoneer.dot), 用自个儿的思路重构
 `私人 Python 学习路线图`
 
 ## 参考
@@ -55,6 +55,7 @@ e.g. [微信开发学习路线](http://bss.csdn.net/m/topic/learning_path_weixin
 
 ## (￣▽￣)
 
+- 181020 fix img URI
 - 150924 发布草案
 - 150920 创建
 
