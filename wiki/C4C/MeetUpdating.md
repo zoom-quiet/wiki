@@ -393,6 +393,27 @@ http://wiki.woodpecker.org.cn/moin/RouseChina
 有长篇回应的可以邮件俺 `zoomquiet+or@gmail.com`
 
 ## 更新
+
+- 161214 [在线教育应该怎么玩 · Yixuan](http://yixuan.li/)
+	+ 是也乎,(￣▽￣)
+	+ 以前不相信这种游戏化自学平台的,
+		* 后来无意中注册了 duolingo , 就这么简单的坚持了52天每天几分钟的 en 自学...
+		* 发觉形式的确决定内容, 以及学习行为;
+		* 但是, 只能适合碎片化的知识点式学习....
+		* 编程这种创造型的, 难以为继
+	+ Yixuan Li Mod  Zoom.Quiet • 2 years ago
+		* 总之啊, 梗说来说去就这么几个...
+		* 1. 知识性 - 在线学习
+			* 缺乏复习系统
+			* 缺乏系统是因为缺乏粘性
+			* 可学习和粘性是悖论, 除非爷爷天天拿着拐棍逼着学.
+
+		* 2. 编程类
+			* 除非让alpha go给出题, 不然再框框里学习总是有限的东西.
+			* 机械学习一言以记之: 
+
+> 以无法为有法, 以无限为有限.
+
 - 161027 @Yixuan Li 点评:
 	- `MeetUp` 的核心概念说的很对. 以前一直觉得很多 meetup 就像 party 一样, 大家 high 一下, 没有发生质变. 以下这四条可以有效防止大家在 meetup 中瞎扯淡.
 		+ 1. 一本书才能解决的问题，别来 Meetup，比如想听源码分析方面的；
@@ -407,6 +428,6 @@ http://wiki.woodpecker.org.cn/moin/RouseChina
 - 160425 发布初版本
 - 160422 意动
 
-[1]:	http://zoomq.qiniudn.com/CPyUG/140330-OSTC/140330_ostc_pm1_zoomquiet.MP3
-[2]:	http://openmindclub.qiniudn.com/_presentations/Zoom.Quiet_just4fun_v140329.pdf
-[3]:	http://zoomq.qiniudn.com/CPyUG/zq2voice/140307-tm4km-kn.MP3
+[1]:	http://0.zoomquiet.top/CPyUG/140330-OSTC/140330_ostc_pm1_zoomquiet.MP3
+[2]:	http://openmindclub.zoomquiet.top/_presentations/Zoom.Quiet_just4fun_v140329.pdf
+[3]:	http://0.zoomquiet.top/CPyUG/zq2voice/140307-tm4km-kn.MP3
