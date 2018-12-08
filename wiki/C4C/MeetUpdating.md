@@ -2,6 +2,7 @@
 提醒,这是一次貌似封闭,内心挣扎的定论般的私人总结... 
 
 ## 背景
+
 - 俺: 大妈, 是在09年成为的大妈.
 - 2000年因为自学 PHP 才知道有技术社区,
 - 然后, 2002年入 Python 教,2003年参与创始 啄木鸟社区,
@@ -9,9 +10,7 @@
 
 10年接触到 OpenResty, 12年因为听录春哥的分享,进入又一社区
 
-(由Lua 粘合的Nginx生态环境 -- agentzh tech-club.org 演讲听录 @ 2012-03-06 01:13 - Zoom.Quiet's PyBlosxom blogging 
-
-http://blog-zq-org.qiniucdn.com/pyblosxom/oss/openresty-intro-2012-03-06-01-13.html
+([由Lua 粘合的Nginx生态环境 -- agentzh tech-club.org 演讲听录 @ 2012-03-06 01:13 - Zoom.Quiet's PyBlosxom blogging](http://blog-zq-org.qiniucdn.com/pyblosxom/oss/openresty-intro-2012-03-06-01-13.html)
 )
 
 3年后, 因为同时认识相关人士, 触发了 锤子 第二次的技术社区捐助.
@@ -27,20 +26,16 @@ http://blog-zq-org.qiniucdn.com/pyblosxom/oss/openresty-intro-2012-03-06-01-13.h
 
 ## 问题
 
-	'... 这两次的 Meetup 是不满意的,特别是和科技猫的古茜聊了一晚上以后(请自行脑补)'''
+>	'... 这两次的 Meetup 是不满意的,特别是和科技猫的古茜聊了一晚上以后(请自行脑补)'''
 
 嗯哼, `温总` 自责的总结了以往 OpenResty 社区活动,是如上开头的...
 
 相关如此,俺的过往论断:
 
-- 关 乎社群:7 技术社区的性格 | DevRel | 开发者关系.思考 
-	http://devrel.info/2014-03/ac7-community-character/
-- 关 乎社群:2 什么是技术社区? | DevRel | 开发者关系.思考 
-	http://devrel.info/2014-02/ac2-tech-community/
-- 以及 OCTC2014 上俺的演讲录音:
-[http://zoomq.qiniudn.com/CPyUG/140330-OSTC/140330\_ostc\_pm1\_zoomquiet.MP3][1]
-- 对应幻灯:
-[http://openmindclub.qiniudn.com/\_presentations/Zoom.Quiet\_just4fun\_v140329.pdf][2]
+- [关 乎社群:7 技术社区的性格 . DevRel . 开发者关系.思考](http://devrel.info/2014-03/ac7-community-character/) 
+- [关 乎社群:2 什么是技术社区? . DevRel . 开发者关系.思考](http://devrel.info/2014-02/ac2-tech-community/)
+- 以及 OCTC2014 上俺的演讲录音:[140330\_ostc\_pm1\_zoomquiet.MP3][1]
+- 对应幻灯:[Zoom.Quiet\_just4fun\_v140329.pdf][2]
 
 
 很早,就发现,中国技术社区有种末世情结;非常苦大仇深的在持续考虑社区发展问题; 
@@ -57,8 +52,8 @@ http://blog-zq-org.qiniucdn.com/pyblosxom/oss/openresty-intro-2012-03-06-01-13.h
 是也乎,(￣▽￣)
 自恋点的说法是, 这也是发源自俺的忽悠:
 
-RouseChina - Woodpecker Wiki for CPUG 
-http://wiki.woodpecker.org.cn/moin/RouseChina
+[RouseChina - Woodpecker Wiki for CPUG ](http://wiki.woodpecker.org.cn/moin/RouseChina)
+
 
 我们的奋起宣言!
 
@@ -95,9 +90,8 @@ http://wiki.woodpecker.org.cn/moin/RouseChina
 没有一个稳固的三观,是非常容易跑偏的...
 
 ### 技术社区
-再次参考: 
-- 关 乎社群:2 什么是技术社区? | DevRel | 开发者关系.思考 
-	http://devrel.info/2014-02/ac2-tech-community/
+再次参考:  [关 乎社群:2 什么是技术社区? . DevRel . 开发者关系.思考 ](http://devrel.info/2014-02/ac2-tech-community/)
+	
 
 是的, 当前全部的讨论只是针对技术社区,而不是那些各种号称技术社区的其它社区.
 因为,简单点说, 社区就是人的聚集,嘦有一定数量的人依从相同的故事认同,聚集在一起,
@@ -148,6 +142,7 @@ http://wiki.woodpecker.org.cn/moin/RouseChina
 唯一永远无法免费的, 只有真正的知识分享`过程`
 
 #### 知识
+
 在技术社区中,是一个好象公认的明确的事物,
 但是,其实都在使用互联网时代之前的知识概念来规划所有社区行为,
 是从根本上有问题的.
@@ -164,6 +159,7 @@ http://wiki.woodpecker.org.cn/moin/RouseChina
 - 计量单位 p/mh (每问题/每成员平均用小时数)
 
 #### 分享
+
 知识的分享,其实就是知识本身的一个无法割裂的部分,
 试想如果一种技术经验不再分享出来,除发现人之外再没有任何人可以接触到这一经验,
 那么,这个知识点,对人类而言,其实就已经不存在了.
@@ -175,6 +171,7 @@ http://wiki.woodpecker.org.cn/moin/RouseChina
 其它人,是难以 got 到这位高人的情趣的,只会感觉: `丫忒奇怪了,竟然在命令行下写代码!`
 
 所以,学习,其实就是:
+
 - 强行, 
 - 或是徦装自己能
 - 从先行者身上 `得趣` 
@@ -228,6 +225,7 @@ http://wiki.woodpecker.org.cn/moin/RouseChina
 为什么一定要将活动组织的这么娱乐化!?
 
 #### 交流
+
 说穿了,就是交流是为了什么!?
 在 `温总` 的决议中对交流的期待有这么约定:
 
@@ -300,6 +298,7 @@ http://wiki.woodpecker.org.cn/moin/RouseChina
 没有报名/签到,只是定期来,为什么!? 生活节奏而已.
 
 所以,社区交流活动, 最髙境界,并不是宏大华丽的年度大会,而是:
+
 - 自发的
 - 定期的
 - 习惯呈自然的
@@ -386,7 +385,9 @@ http://wiki.woodpecker.org.cn/moin/RouseChina
 	- 部分商业化: 将有能力商业化的部分独立出去,原有的社区继续,只是多了个固定的赞助来源...
 	- 回避商业化: 将商业化运营/管理等等事务,都外包出去(Apache 基金会就是提供这种专业服务的组织), 社区继续专注自身技术追求,只是多了职业经理来对口服务.
 
-是也乎,(￣▽￣)
+
+> 是也乎,(￣▽￣)
+
 还有很多值得吐糟的,但是,先到这儿,
 看大家对哪部分更有兴趣,继续共同挖掘... 
 
@@ -407,7 +408,6 @@ http://wiki.woodpecker.org.cn/moin/RouseChina
 			* 缺乏复习系统
 			* 缺乏系统是因为缺乏粘性
 			* 可学习和粘性是悖论, 除非爷爷天天拿着拐棍逼着学.
-
 		* 2. 编程类
 			* 除非让alpha go给出题, 不然再框框里学习总是有限的东西.
 			* 机械学习一言以记之: 
