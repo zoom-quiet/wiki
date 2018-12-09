@@ -1050,6 +1050,21 @@ maitreya; karuṇā
 ![lyx](http://1.zoomquiet.top/res/snap/debug2buddha/buddha_split1.png?imageView2/2/h/360)
 
 
+#### BINDed...
+
+
+![debug2buddha_bind](http://1.zoomquiet.top/res/snap/debug2buddha/debug2buddha_bind.png?imageView2/2/w/360)
+
+
+![debug2buddha_bind](http://1.zoomquiet.top/res/snap/debug2buddha/debug2buddha_bindd.png?imageView2/2/w/360)
+
+![debug2buddha_bind](http://1.zoomquiet.top/res/snap/debug2buddha/debug2buddha_binddd.png?imageView2/2/w/360)
+
+「 Yixuan: 这就是疯狂「反驳部分」的错误. 在哲理上不会有任何贡献的...他们能破掉一切...然而什么都建立不起来. 」
+- - - - - - - - - - - - - - -
+
+
+
 ## Sayeahooo ...
 
 所以:
@@ -1076,5 +1091,6 @@ maitreya; karuṇā
 
 ## (￣▽￣)
 
+- 181208 ZQ logging 后续嗯哼..
 - 181208 ZQ logging
 
