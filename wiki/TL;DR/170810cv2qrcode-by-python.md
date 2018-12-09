@@ -46,14 +46,14 @@
     + [Pocket: OpenCV: QR Code detection and extraction](http://zqdevres.qiniucdn.com/data/20170807165718/index.html)
 - [QR code detection and decode in python \- YouTube](https://www.youtube.com/watch?v=c8EhR8AYsoM)
     + ...
-- [学习笔记：使用 OpenCV 识别 QRCode \| Why's Blog](https://blog.callmewhy.com/2016/04/23/opencv-find-qrcode-position/)
+- [学习笔记:使用 OpenCV 识别 QRCode \| Why's Blog](https://blog.callmewhy.com/2016/04/23/opencv-find-qrcode-position/)
 
 果断有狠人, 根据 QR Code 标准, 准备用 OpenCV 直接手工来解析...
 
 好在所有知识点都是标准的:
 
 
-![qr-code-parts.png（PNG 图像，1229x624 像素） - 缩放 (88%)](http://openmindclub.qiniucdn.com/res/usee/snap/qr-code-parts.png?imageView2/2/w/420)
+![qr-code-parts.png(PNG 图像,1229x624 像素) - 缩放 (88%)](http://openmindclub.qiniucdn.com/res/usee/snap/qr-code-parts.png?imageView2/2/w/420)
 
 QR Code 结构
 
@@ -111,7 +111,7 @@ QR 方向判别
     + 明明非常清晰的图像
     + 预处理也非常良好
 
-![qrcode-findContours-edges.png（PNG 图像，173x502 像素）](http://openmindclub.qiniucdn.com/res/usee/snap/qrcode-findContours-edges.png?imageView2/2/w/360)
+![qrcode-findContours-edges.png(PNG 图像,173x502 像素)](http://openmindclub.qiniucdn.com/res/usee/snap/qrcode-findContours-edges.png?imageView2/2/w/360)
 
 **但是!** 原先工作良好的代码,死活就是识别不出所有 `Position Detection Pattern` 
 
