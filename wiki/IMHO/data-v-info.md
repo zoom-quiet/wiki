@@ -4,7 +4,7 @@
 ~直觉式的阐述个人当前数据可视化世界观
 
 
-![datav2vinfo.png(PNG 图像,776x814 像素) -  Graphviz 生成](http://http://0.zoomquiet.top/ZQCollection/map/datav2vinfo.png?imageView2/2/w/600)
+![datav2vinfo.png(PNG 图像,776x814 像素) -  Graphviz 生成](http://0.zoomquiet.top/ZQCollection/map/datav2vinfo.png?imageView2/2/w/600)
 
 
 - 源代码: [datav2vinfo.dot](https://bitbucket.org/ZoomQuiet/tangle/src/f7d3402616263fe1ba3b9fd360c623e257349f1d/dot/obp/datav2vinfo.dot?at=default)
@@ -234,5 +234,6 @@
 
 ## 是也乎
 
+- 181210 发现大图 URI 错误, fixed
 - 150101 发现从 [杂谈集](http://datavlab.org/cat/thoughts) 消失了,于是使用 md 重制收录
 - 120311 发布在: [数据可视化 到 可视化信息 浅述 - DataVlab.org](http://datavlab.org/2012/03/11/2503)
